@@ -16,9 +16,7 @@ const Layout = ({ children, title }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     {children}
-    <footer>
-      <hr />
-    </footer>
+    <footer></footer>
   </div>
 );
 

@@ -1,9 +1,20 @@
 import styled from "styled-components";
-import { PADDING_Y } from "../../utils/contants";
+import {
+  FONT_MD,
+  FONT_SM,
+  FONT_XS,
+  HEADING_MD,
+  HEADING_SM,
+  PADDING_Y_LG,
+  PADDING_Y_MD,
+  SCREEN_LG,
+  SCREEN_SM,
+  SCREEN_XS,
+} from "../../utils/contants";
 
 export const Container = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   background-color: #343434;
 
@@ -11,7 +22,11 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem ${PADDING_Y} 0 ${PADDING_Y};
+    padding: 2rem ${PADDING_Y_MD} 0 ${PADDING_Y_MD};
+
+    @media (min-width: ${SCREEN_LG}) {
+      padding: 2rem ${PADDING_Y_LG} 0 ${PADDING_Y_LG};
+    }
 
     > div:first-child {
       width: 100%;
@@ -24,6 +39,10 @@ export const Container = styled.div`
       width: 100%;
       display: flex;
       margin-top: 10rem;
+
+      @media (max-width: ${SCREEN_XS}) {
+        flex-direction: column;
+      }
     }
   }
 `;
@@ -39,10 +58,20 @@ export const IntroContainer = styled.section`
   align-items: center;
 
   > div {
+    font-size: ${FONT_SM};
+
+    @media (max-width: ${SCREEN_SM}) {
+      font-size: ${FONT_XS};
+    }
+
     > h1 {
-      font-size: 2rem;
+      font-size: ${HEADING_MD};
       margin: 0;
       padding: 0;
+
+      @media (max-width: ${SCREEN_SM}) {
+        font-size: ${HEADING_SM};
+      }
     }
   }
 `;
@@ -54,8 +83,8 @@ export const VideoContainer = styled.section`
   align-items: center;
 
   > div {
-    width: 35rem;
-    height: 25rem;
+    width: 70%;
+    height: 15rem;
     background-color: grey;
   }
 `;
