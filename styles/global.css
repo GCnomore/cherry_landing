@@ -4,3 +4,22 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.fadeInDown {
+  animation: fadeInDown 1s ease-out;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}

@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
+  BG_COLOR,
   FONT_MD,
   FONT_SM,
   FONT_XS,
@@ -16,7 +17,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: #343434;
+  background-color: ${BG_COLOR};
 
   > div {
     width: 100%;
@@ -37,8 +38,10 @@ export const Container = styled.div`
 
     > div:nth-child(2) {
       width: 100%;
+      height: 100%;
       display: flex;
-      margin-top: 10rem;
+      justify-content: center;
+      padding-bottom: 10rem;
 
       @media (max-width: ${SCREEN_XS}) {
         flex-direction: column;
@@ -56,6 +59,8 @@ export const IntroContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
 
   > div {
     font-size: ${FONT_SM};
@@ -81,6 +86,8 @@ export const VideoContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
 
   > div {
     width: 70%;

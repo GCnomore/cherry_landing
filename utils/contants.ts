@@ -2,6 +2,7 @@
 export const PADDING_Y_LG = "10%";
 export const PADDING_Y_MD = "5%";
 export const MAIN_COLOR = "#D2023D";
+export const BG_COLOR = "#fef2e4";
 
 export const FONT_FAMILY = "'Poppins', sans-serif;";
 export const HEADING_LG = "3rem";

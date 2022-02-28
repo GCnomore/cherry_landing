@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import BgImg from "../../assets/images/image4.png";
 import {
+  BG_COLOR,
   FONT_LG,
   FONT_MD,
   FONT_SM,
@@ -22,6 +23,7 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  background-color: ${BG_COLOR};
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
@@ -37,15 +39,34 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: ${SCREEN_LG}) {
     width: calc(55% - ${PADDING_Y_LG});
     padding-left: ${PADDING_Y_LG};
   }
 
+  /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
     padding-top: 3rem;
     width: 100%;
+  }
+`;
+
+export const BackLogo = styled.div`
+  position: absolute;
+  top: 10rem;
+  left: 30%;
+  width: 20rem;
+  filter: drop-shadow(0px 0px 8px black) contrast(0.9) opacity(0.3);
+  z-index: -1;
+
+  /* Mobile layout */
+  @media (max-width: ${SCREEN_XS}) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
   }
 `;
 
@@ -56,6 +77,8 @@ export const ProblemImgContainer = styled.div`
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position-x: 65%;
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
 
   @media (min-width: ${SCREEN_LG}) {
     width: calc(45% - ${PADDING_Y_LG});
@@ -64,13 +87,14 @@ export const ProblemImgContainer = styled.div`
   @media (max-width: ${SCREEN_XS}) {
     position: absolute;
     width: 100%;
-    z-index: -1;
     background-position: 50%;
   }
 `;
 
 export const TopSection = styled.section`
   padding-top: 0.1%;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
 
   > h2 {
     margin: 0;
@@ -139,13 +163,15 @@ export const BottomSection = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ddd;
+      /* background-color: #ddd; */
+      background-color: #d92d5e;
       padding: 3%;
       border-radius: 30px;
       min-width: 190px;
       min-height: 190px;
       margin-right: 2vw;
       position: relative;
+      box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
 
       /* Mobile layout */
       @media (max-width: ${SCREEN_XS}) {
@@ -166,7 +192,8 @@ export const BottomSection = styled.section`
       > span:first-child {
         position: absolute;
         top: 15%;
-        color: ${MAIN_COLOR};
+        /* color: ${MAIN_COLOR}; */
+        color: #fcedda;
         font-size: ${HEADING_MD};
         font-weight: bold;
         margin-bottom: 1rem;

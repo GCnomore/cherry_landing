@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import BgImg from "../../assets/images/image5.png";
 import {
+  BG_COLOR,
   FONT_LG,
   FONT_MD,
   FONT_SM,
@@ -23,6 +24,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: ${BG_COLOR};
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
@@ -113,6 +115,7 @@ export const BottomSection = styled.section`
       align-items: center;
       position: relative;
       padding: 0 2rem;
+      box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
 
       @media (max-width: ${SCREEN_XS}) {
         flex-direction: column;
@@ -130,11 +133,14 @@ export const BottomSection = styled.section`
         top: -50px;
         width: 100px;
         height: 100px;
+        border-radius: 50px;
+        box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
 
         @media (max-width: ${SCREEN_SM}) {
           width: 80px;
           height: 80px;
           top: -40px;
+          border-radius: 40px;
         }
       }
 
