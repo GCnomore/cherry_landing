@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 
-import { FONT_FAMILY } from "../utils/contants";
+import { FONT_FAMILY, MAX_WIDTH_LG, PADDING_MD } from "../utils/contants";
+import styled from "styled-components";
 
 type Props = {
   children?: ReactNode;

@@ -23,7 +23,6 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color: ${BG_COLOR};
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
@@ -33,9 +32,7 @@ export const Container = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  width: calc(65% - ${PADDING_Y_MD});
   height: 100%;
-  padding-left: ${PADDING_Y_MD};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +40,6 @@ export const ContentContainer = styled.div`
   z-index: 2;
 
   @media (min-width: ${SCREEN_LG}) {
-    width: calc(55% - ${PADDING_Y_LG});
     padding-left: ${PADDING_Y_LG};
   }
 
@@ -92,7 +88,6 @@ export const ProblemImgContainer = styled.div`
 `;
 
 export const TopSection = styled.section`
-  padding-top: 0.1%;
   animation-name: fadeInDown;
   animation-duration: 1.5s;
 

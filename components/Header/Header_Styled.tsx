@@ -6,6 +6,8 @@ import {
   FONT_XS,
   HEADING_MD,
   HEADING_SM,
+  MAX_WIDTH_INNER_MD,
+  MAX_WIDTH_MD,
   PADDING_Y_LG,
   PADDING_Y_MD,
   SCREEN_LG,
@@ -13,54 +15,29 @@ import {
   SCREEN_XS,
 } from "../../utils/contants";
 
-export const Container = styled.div`
+export const Container = styled.main`
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
-  background-color: ${BG_COLOR};
+  margin-bottom: auto;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 
-  > div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem ${PADDING_Y_MD} 0 ${PADDING_Y_MD};
-
-    @media (min-width: ${SCREEN_LG}) {
-      padding: 2rem ${PADDING_Y_LG} 0 ${PADDING_Y_LG};
-    }
-
-    > div:first-child {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    > div:nth-child(2) {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 10rem;
-
-      @media (max-width: ${SCREEN_XS}) {
-        flex-direction: column;
-      }
-    }
+  @media (max-width: ${MAX_WIDTH_MD}) {
+    max-width: ${MAX_WIDTH_INNER_MD};
   }
 `;
 
-export const LogoContainer = styled.section`
-  width: 8rem;
-`;
-
 export const IntroContainer = styled.section`
-  width: 100%;
+  width: 47%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   animation-name: fadeInLeft;
   animation-duration: 1.5s;
+  flex-wrap: wrap;
 
   > div {
     font-size: ${FONT_SM};
@@ -71,7 +48,7 @@ export const IntroContainer = styled.section`
 
     > h1 {
       font-size: ${HEADING_MD};
-      margin: 0;
+      margin: 0 0 1rem 0;
       padding: 0;
 
       @media (max-width: ${SCREEN_SM}) {
@@ -81,17 +58,22 @@ export const IntroContainer = styled.section`
   }
 `;
 
+export const LogoContainer = styled.section`
+  width: 20rem;
+  margin-bottom: 1rem;
+`;
+
 export const VideoContainer = styled.section`
-  width: 100%;
+  width: 47%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   animation-name: fadeIn;
   animation-duration: 1.5s;
 
   > div {
-    width: 70%;
-    height: 15rem;
+    width: 100%;
+    height: 60%;
     background-color: grey;
   }
 `;
