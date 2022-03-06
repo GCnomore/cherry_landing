@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export default function FadeInDown(props) {
+interface FadeInDownProps {
+  children: React.ReactNode;
+  delay?: number;
+}
+
+export default function FadeInDown({ children, delay = 0.2 }: FadeInDownProps) {
   const [_fadeIn, _setFadeIn] = useState<boolean>(false);
 
   const domRef = useRef<HTMLDivElement>();
@@ -9,7 +14,9 @@ export default function FadeInDown(props) {
     const observer: IntersectionObserver = new IntersectionObserver(
       (entries) => {
         if (!_fadeIn && entries[0].isIntersecting) {
-          _setFadeIn(true);
+          setTimeout(() => {
+            _setFadeIn(true);
+          }, delay * 1000);
         }
       }
     );
@@ -18,11 +25,10 @@ export default function FadeInDown(props) {
   }, []);
   return (
     <div
-      style={{ width: "100%" }}
-      className={`fade-in-section ${_fadeIn ? "fadeInDown" : ""}`}
+      className={`fade-in-section ${_fadeIn ? "fadeInDown" : "hidden"}`}
       ref={domRef}
     >
-      {props.children}
+      {children}
     </div>
   );
 }

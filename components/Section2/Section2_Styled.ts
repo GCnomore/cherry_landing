@@ -3,15 +3,17 @@ import styled from "styled-components";
 import BgImg from "../../assets/images/image5.png";
 import {
   BG_COLOR,
-  FONT_LG,
-  FONT_MD,
-  FONT_SM,
-  FONT_XS,
+  FONT_SIZE_LG,
+  FONT_SIZE_MD,
+  FONT_SIZE_SM,
+  FONT_SIZE_XS,
   HEADING_LG,
   HEADING_MD,
   HEADING_SM,
+  HEADING_XL,
   HEADING_XS,
   MAIN_COLOR,
+  PADDING_INNER_MOBILE,
   PADDING_Y_LG,
   PADDING_Y_MD,
   SCREEN_LG,
@@ -19,47 +21,31 @@ import {
   SCREEN_XS,
 } from "../../utils/contants";
 
-export const Container = styled.div`
-  height: 100vh;
+export const Container = styled.section`
+  /* height: 100vh; */
+  height: 100%;
   width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  background-color: ${BG_COLOR};
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
     height: 100%;
   }
-
-  > div:first-child {
-    width: 100%;
-    height: 20rem;
-    background-image: url(${BgImg.src});
-    background-position: 0 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  > div:last-child {
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 ${PADDING_Y_MD};
-
-    @media (min-width: ${SCREEN_LG}) {
-      padding: 0 ${PADDING_Y_LG};
-    }
-  }
 `;
 
-export const TopSection = styled.section`
+export const TitleSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding-top: 3rem;
+  color: white;
 
-  > h2 {
+  h2 {
     margin: 0;
-    font-size: ${HEADING_MD};
+    font-size: ${HEADING_XL};
 
     @media (max-width: ${SCREEN_SM}) {
       font-size: ${HEADING_SM};
@@ -67,12 +53,11 @@ export const TopSection = styled.section`
   }
 `;
 
-export const MidSection = styled.section`
-  margin-top: 5rem;
-  font-size: ${FONT_MD};
+export const SubTitleSection = styled.section`
+  font-size: ${FONT_SIZE_MD};
 
   @media (max-width: ${SCREEN_SM}) {
-    font-size: ${FONT_SM};
+    font-size: ${FONT_SIZE_SM};
   }
 
   > span {
@@ -80,19 +65,19 @@ export const MidSection = styled.section`
   }
 `;
 
-export const BottomSection = styled.section`
+export const SolutionSection = styled.section`
   display: flex;
-  margin-top: 3rem;
+  margin-top: 5%;
   width: 100%;
   height: 100%;
   padding: 0;
 
   > div {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
 
     /* Mobile layout */
     @media (max-width: ${SCREEN_XS}) {
@@ -101,75 +86,65 @@ export const BottomSection = styled.section`
       margin-top: 50px;
     }
 
-    > div {
-      width: 25%;
-      height: 35%;
-      min-width: 200px;
-      min-height: 210px;
-      max-height: 210px;
-      border-radius: 20px;
-      background-color: #ddd;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      padding: 0 2rem;
-      box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
+    > div:nth-child(odd) {
+      align-self: flex-start;
+    }
+    > div:nth-child(even) {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+      text-align: end;
+    }
+  }
+`;
 
-      @media (max-width: ${SCREEN_XS}) {
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 2%;
-        height: 150px;
-        width: 250px;
-        min-height: 0px;
-        min-width: 0px;
-        margin-bottom: 60px;
-      }
+export const SolutionItem = styled.div`
+  height: 100%;
+  display: flex;
+  position: relative;
+  color: white;
 
-      > span:first-child {
-        position: absolute;
-        top: -50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
+  @media (max-width: ${SCREEN_XS}) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+    height: 150px;
+    width: 250px;
+    min-height: 0px;
+    min-width: 0px;
+    margin-bottom: 60px;
+  }
 
-        @media (max-width: ${SCREEN_SM}) {
-          width: 80px;
-          height: 80px;
-          top: -40px;
-          border-radius: 40px;
-        }
-      }
+  > div:first-child {
+    width: 100%;
 
-      > span:nth-child(2) {
-        width: 100%;
-        height: 100%;
-        color: ${MAIN_COLOR};
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10%;
-        font-size: ${HEADING_SM};
-        font-weight: bold;
+    @media (max-width: ${SCREEN_SM}) {
+      width: 80px;
+      height: 80px;
+      top: -40px;
+      border-radius: 40px;
+    }
+  }
 
-        @media (max-width: ${SCREEN_SM}) {
-          font-size: ${HEADING_XS};
-        }
-      }
+  > div:nth-child(2) {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-      > span:nth-child(3) {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        font-size: ${FONT_SM};
+    @media (max-width: ${SCREEN_SM}) {
+      font-size: ${HEADING_XS};
+    }
 
-        @media (max-width: ${SCREEN_SM}) {
-          font-size: ${FONT_XS};
-        }
+    > span:nth-child(1) {
+      font-size: ${HEADING_SM};
+      font-weight: bold;
+    }
+
+    > span:nth-child(2) {
+      font-size: ${FONT_SIZE_SM};
+
+      @media (max-width: ${SCREEN_SM}) {
+        font-size: ${FONT_SIZE_XS};
       }
     }
   }

@@ -3,31 +3,36 @@ import styled from "styled-components";
 import BgImg from "../../assets/images/image4.png";
 import {
   BG_COLOR,
-  FONT_LG,
-  FONT_MD,
-  FONT_SM,
-  FONT_XS,
+  FONT_SIZE_LG,
+  FONT_SIZE_MD,
+  FONT_SIZE_SM,
+  FONT_SIZE_XS,
   HEADING_LG,
   HEADING_MD,
   HEADING_SM,
+  HEADING_XL,
   HEADING_XS,
   MAIN_COLOR,
   PADDING_Y_LG,
   PADDING_Y_MD,
   SCREEN_LG,
+  SCREEN_MOBILE,
+  SCREEN_MOBILE_SM,
   SCREEN_SM,
   SCREEN_XS,
 } from "../../utils/contants";
 
-export const Container = styled.div`
-  height: 100vh;
+export const Container = styled.section`
   width: 100%;
   display: flex;
 
   /* Mobile layout */
-  @media (max-width: ${SCREEN_XS}) {
-    height: 100%;
+  @media (max-width: ${SCREEN_MOBILE}) {
+    height: auto;
     position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -35,25 +40,16 @@ export const ContentContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: space-between; */
   position: relative;
   z-index: 2;
-
-  @media (min-width: ${SCREEN_LG}) {
-    padding-left: ${PADDING_Y_LG};
-  }
-
-  /* Mobile layout */
-  @media (max-width: ${SCREEN_XS}) {
-    padding-top: 3rem;
-    width: 100%;
-  }
 `;
 
 export const BackLogo = styled.div`
   position: absolute;
-  top: 10rem;
-  left: 30%;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 20rem;
   filter: drop-shadow(0px 0px 8px black) contrast(0.9) opacity(0.3);
   z-index: -1;
@@ -66,46 +62,42 @@ export const BackLogo = styled.div`
   }
 `;
 
-export const ProblemImgContainer = styled.div`
-  height: 100%;
-  width: 35%;
-  background-image: url(${BgImg.src});
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position-x: 65%;
-  animation-name: fadeInRight;
-  animation-duration: 1.5s;
-
-  @media (min-width: ${SCREEN_LG}) {
-    width: calc(45% - ${PADDING_Y_LG});
-  }
-
-  @media (max-width: ${SCREEN_XS}) {
-    position: absolute;
-    width: 100%;
-    background-position: 50%;
-  }
-`;
-
-export const TopSection = styled.section`
-  animation-name: fadeInDown;
-  animation-duration: 1.5s;
+export const TitleSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
 
   > h2 {
     margin: 0;
-    font-size: ${HEADING_MD};
+    font-size: ${HEADING_XS};
+    font-weight: 300;
 
     @media (max-width: ${SCREEN_SM}) {
       font-size: ${HEADING_SM};
     }
 
+    @media (max-width: ${SCREEN_MOBILE_SM}) {
+      font-size: ${HEADING_XS};
+    }
+  }
+
+  > div {
     &:last-child {
-      color: ${MAIN_COLOR};
+      > h2:last-child {
+        color: white;
+        margin: 0;
+        font-size: ${HEADING_XL};
+        font-weight: 600;
+      }
     }
   }
 `;
 
 export const MidSection = styled.section`
+  display: flex;
   margin-top: 4%;
 
   > h3 {
@@ -118,97 +110,63 @@ export const MidSection = styled.section`
     }
   }
 
+  ul {
+    padding: 0;
+    display: flex;
+
+    @media (max-width: ${SCREEN_MOBILE}) {
+      flex-direction: column;
+      padding: 0 20vw;
+    }
+
+    > div {
+      width: 100%;
+      height: 100%;
+      margin: 0 1rem;
+      border-radius: 10px;
+      box-shadow: 2px 3px 4px 3px rgb(0 0 0 / 10%);
+      background-color: #ffffff1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: ${SCREEN_MOBILE}) {
+        margin: 2rem 0;
+      }
+    }
+  }
+
   li {
-    font-size: ${FONT_MD};
-    margin: 1.5rem 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin: 1.5rem 2rem;
+    font-size: ${FONT_SIZE_SM};
+    text-align: center;
 
     @media (max-width: ${SCREEN_SM}) {
-      font-size: ${FONT_SM};
+      font-size: ${FONT_SIZE_SM};
+    }
+
+    @media (max-width: ${SCREEN_XS}) {
+      font-size: ${FONT_SIZE_XS};
     }
   }
 `;
 
-export const BottomSection = styled.section`
-  margin-top: 4%;
+export const ImageContainer = styled.span`
+  width: 15rem;
 
-  > h3 {
-    font-size: ${HEADING_SM};
-    margin: 0 0 2rem 0;
-    font-style: italic;
-
-    @media (max-width: ${SCREEN_SM}) {
-      font-size: ${HEADING_XS};
-    }
+  @media (max-width: ${SCREEN_SM}) {
+    width: 12rem;
   }
 
-  > div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-
-    /* Mobile layout */
-    @media (max-width: ${SCREEN_XS}) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    > div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      /* background-color: #ddd; */
-      background-color: #d92d5e;
-      padding: 3%;
-      border-radius: 30px;
-      min-width: 190px;
-      min-height: 190px;
-      margin-right: 2vw;
-      position: relative;
-      box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.3);
-
-      /* Mobile layout */
-      @media (max-width: ${SCREEN_XS}) {
-        margin-bottom: 1.5rem;
-        min-width: 0px;
-        min-height: 0px;
-        height: 200px;
-        width: 200px;
-      }
-
-      @media (max-width: ${SCREEN_SM}) and (min-width: ${SCREEN_XS}) {
-        min-width: 140px;
-        min-height: 140px;
-        width: 10vw;
-        height: 10vw;
-      }
-
-      > span:first-child {
-        position: absolute;
-        top: 15%;
-        /* color: ${MAIN_COLOR}; */
-        color: #fcedda;
-        font-size: ${HEADING_MD};
-        font-weight: bold;
-        margin-bottom: 1rem;
-
-        @media (max-width: ${SCREEN_SM}) {
-          font-size: ${HEADING_SM};
-        }
-      }
-
-      > span:last-child {
-        position: absolute;
-        top: 45%;
-        font-size: ${FONT_SM};
-        text-align: center;
-        padding: 0 1rem;
-
-        @media (max-width: ${SCREEN_SM}) and (min-width: ${SCREEN_XS}) {
-          font-size: ${FONT_XS};
-        }
-      }
-    }
+  @media (max-width: ${SCREEN_XS}) {
+    width: 9rem;
   }
 `;

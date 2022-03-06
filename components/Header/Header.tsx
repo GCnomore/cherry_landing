@@ -1,15 +1,26 @@
 import Image from "next/image";
 import React from "react";
 
-import Logo from "../../assets/images/logo.png";
-import { BG_COLOR } from "../../utils/contants";
-import Wrapper from "../Wrapper/Wrapper";
+import Logo from "../../assets/images/logo_text.png";
+import LogoIcon from "../../assets/images/logo_icon_color.png";
+import BgImage from "../../assets/images/checkout.png";
 import * as Styled from "./Header_Styled";
 
 export default function Header() {
   return (
-    <Wrapper bgColor={BG_COLOR}>
-      <Styled.Container>
+    <Styled.Container>
+      <Styled.MenuContainer>
+        <div>
+          <Image src={LogoIcon} alt="logo" />
+        </div>
+        <div>
+          <span>Home</span>
+          <span>What we do</span>
+          <span>Features</span>
+          <span>Contact us?</span>
+        </div>
+      </Styled.MenuContainer>
+      <div>
         <Styled.IntroContainer>
           <Styled.LogoContainer>
             <Image alt="logo" src={Logo} />
@@ -29,7 +40,10 @@ export default function Header() {
         <Styled.VideoContainer>
           <div>Videoooooooooooooo</div>
         </Styled.VideoContainer>
-      </Styled.Container>
-    </Wrapper>
+      </div>
+      <Styled.BgImage>
+        <Image src={BgImage} alt="background" />
+      </Styled.BgImage>
+    </Styled.Container>
   );
 }

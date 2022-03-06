@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 
-import { FONT_FAMILY, MAX_WIDTH_LG, PADDING_MD } from "../utils/contants";
 import styled from "styled-components";
+import Wrapper from "./Wrapper/Wrapper";
 
 type Props = {
   children?: ReactNode;
@@ -20,9 +20,16 @@ const Layout = ({ children, title }: Props) => (
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
     </Head>
-    {children}
+    <Container>
+      <Wrapper>{children}</Wrapper>
+    </Container>
     <footer></footer>
   </div>
 );
 
 export default Layout;
+
+const Container = styled.main`
+  background-color: #4158d0;
+  background-image: linear-gradient(350deg, #d2023d 0%, #fef2e4 100%);
+`;
