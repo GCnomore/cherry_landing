@@ -1,9 +1,9 @@
 import React from "react";
 
 import * as Styled from "./Section2_Styled";
-import ClickIcon from "../../assets/images/one_click.png";
-import FormIcon from "../../assets/images/forms2.png";
-import AllInOnekIcon from "../../assets/images/all_in_one.png";
+import ClickIcon from "../../public/images/one_click.png";
+import FormIcon from "../../public/images/forms2.png";
+import AllInOnekIcon from "../../public/images/all_in_one.png";
 import Image from "next/image";
 import FadeInDown from "../FadeInDown/FadeInDown";
 import Wrapper from "../Wrapper/Wrapper";

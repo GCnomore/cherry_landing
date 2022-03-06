@@ -39,6 +39,8 @@ export const MAX_WIDTH_MOBILE_SM = "544px";
 
 export const MAX_WIDTH_INNER_MD = "840px";
 
+export const FILTER_SHADOW = "drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.6))";
+
 // linear-gradient(180deg, rgba(254,242,228,1) 0%, rgba(210,2,61,1) 100%)
 
 // background-color: #4158D0;

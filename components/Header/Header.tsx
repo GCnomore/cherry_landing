@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import Logo from "../../assets/images/logo_text.png";
-import LogoIcon from "../../assets/images/logo_icon_color.png";
-import BgImage from "../../assets/images/checkout.png";
+import Logo from "../../public/images/logo_text.png";
+import LogoIcon from "../../public/images/logo_icon_color.png";
 import * as Styled from "./Header_Styled";
 
 export default function Header() {
@@ -41,9 +40,6 @@ export default function Header() {
           <div>Videoooooooooooooo</div>
         </Styled.VideoContainer>
       </div>
-      <Styled.BgImage>
-        <Image src={BgImage} alt="background" />
-      </Styled.BgImage>
     </Styled.Container>
   );
 }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BgImg from "../../assets/images/image5.png";
 import {
   BG_COLOR,
+  FILTER_SHADOW,
   FONT_SIZE_LG,
   FONT_SIZE_MD,
   FONT_SIZE_SM,
@@ -42,6 +43,7 @@ export const TitleSection = styled.section`
   width: 100%;
   padding-top: 3rem;
   color: white;
+  filter: ${FILTER_SHADOW};
 
   h2 {
     margin: 0;
@@ -138,6 +140,7 @@ export const SolutionItem = styled.div`
     > span:nth-child(1) {
       font-size: ${HEADING_SM};
       font-weight: bold;
+      filter: ${FILTER_SHADOW};
     }
 
     > span:nth-child(2) {

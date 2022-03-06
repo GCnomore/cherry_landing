@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BgImg from "../../assets/images/image4.png";
 import {
   BG_COLOR,
+  FILTER_SHADOW,
   FONT_SIZE_LG,
   FONT_SIZE_MD,
   FONT_SIZE_SM,
@@ -39,8 +40,10 @@ export const Container = styled.section`
 export const ContentContainer = styled.div`
   height: 100%;
   display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
   flex-direction: column;
-  /* justify-content: space-between; */
+
   position: relative;
   z-index: 2;
 `;
@@ -69,6 +72,7 @@ export const TitleSection = styled.section`
   align-items: center;
   width: 100%;
   color: white;
+  filter: ${FILTER_SHADOW};
 
   > h2 {
     margin: 0;
@@ -85,7 +89,7 @@ export const TitleSection = styled.section`
   }
 
   > div {
-    &:last-child {
+    &:nth-child(2) {
       > h2:last-child {
         color: white;
         margin: 0;
@@ -96,7 +100,18 @@ export const TitleSection = styled.section`
   }
 `;
 
-export const MidSection = styled.section`
+export const TitleImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  transform: translateX(-20%);
+  > img {
+    width: 100%;
+  }
+`;
+
+export const Contents = styled.div`
   display: flex;
   margin-top: 4%;
 
@@ -113,6 +128,9 @@ export const MidSection = styled.section`
   ul {
     padding: 0;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
 
     @media (max-width: ${SCREEN_MOBILE}) {
       flex-direction: column;
@@ -121,11 +139,6 @@ export const MidSection = styled.section`
 
     > div {
       width: 100%;
-      height: 100%;
-      margin: 0 1rem;
-      border-radius: 10px;
-      box-shadow: 2px 3px 4px 3px rgb(0 0 0 / 10%);
-      background-color: #ffffff1f;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -146,6 +159,7 @@ export const MidSection = styled.section`
     flex-direction: column;
     list-style: none;
     margin: 1.5rem 2rem;
+    padding: 0 7rem;
     font-size: ${FONT_SIZE_SM};
     text-align: center;
 
@@ -160,13 +174,17 @@ export const MidSection = styled.section`
 `;
 
 export const ImageContainer = styled.span`
-  width: 15rem;
-
+  width: 5rem;
   @media (max-width: ${SCREEN_SM}) {
     width: 12rem;
   }
 
   @media (max-width: ${SCREEN_XS}) {
     width: 9rem;
+  }
+
+  > img {
+    width: 100%;
+    filter: ${FILTER_SHADOW};
   }
 `;

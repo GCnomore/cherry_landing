@@ -1,12 +1,8 @@
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 import FadeInDown from "../FadeInDown/FadeInDown";
 
-import LogoWhite from "../../assets/icons/logo_icon_white.png";
-import Experience from "../../assets/images/online-shop.png";
-import Friendly from "../../assets/images/customer_friendly.png";
-import Information from "../../assets/images/online-payment.png";
+import LogoWhite from "../../public/icons/logo_icon_white.png";
 
 import * as Styled from "./Section1_Styled";
 
@@ -23,12 +19,12 @@ export default function Section1() {
         {/* <Styled.BackLogo>
           <Image alt="white logo" src={LogoWhite} />
         </Styled.BackLogo> */}
-        <Styled.MidSection>
+        <Styled.Contents>
           <ul>
             <FadeInDown>
               <li>
                 <Styled.ImageContainer>
-                  <Image src={Experience} />
+                  <img src={"/icons/not-equal.svg"} />
                 </Styled.ImageContainer>
                 <span>Each store’s checkout experience is different</span>
               </li>
@@ -36,7 +32,7 @@ export default function Section1() {
             <FadeInDown>
               <li>
                 <Styled.ImageContainer>
-                  <Image src={Friendly} />
+                  <img src={"/icons/block-maze.svg"} />
                 </Styled.ImageContainer>
                 <span>The checkout process isn’t always customer friendly</span>
               </li>
@@ -44,7 +40,7 @@ export default function Section1() {
             <FadeInDown>
               <li>
                 <Styled.ImageContainer>
-                  <Image src={Information} />
+                  <img src={"/icons/infinity.svg"} />
                 </Styled.ImageContainer>
                 <span>
                   You have to enter personal information over and over again
@@ -52,7 +48,10 @@ export default function Section1() {
               </li>
             </FadeInDown>
           </ul>
-        </Styled.MidSection>
+          <Styled.TitleImage>
+            <img src={"/images/checkout.png"} alt="checkout" />
+          </Styled.TitleImage>
+        </Styled.Contents>
       </Styled.ContentContainer>
     </Styled.Container>
   );
