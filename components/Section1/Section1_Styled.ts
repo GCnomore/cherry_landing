@@ -24,43 +24,28 @@ import {
   SECTION_PADDING,
 } from "../../utils/contants";
 
-export const BG = styled.div`
-  height: 124vh;
-  width: 200vw;
-  position: absolute;
-  margin-left: 10vw;
-  margin-top: -12vw;
-  transform: rotateZ(-5deg);
-  background-image: radial-gradient(
+export const Container = styled.section`
+  /* background-image: radial-gradient(
     circle farthest-corner at 10.2% 55.8%,
     rgba(252, 37, 103, 1) 0%,
     rgba(250, 38, 151, 1) 46.2%,
     rgba(186, 8, 181, 1) 90.1%
-  );
-  /* background-image: linear-gradient(
+  ); */
+  background-image: linear-gradient(
     90deg,
-    ${MAIN_COLOR} 20%,
-    #ffe2ea 50%,
-    ${MAIN_COLOR} 100%
-  ); */
-  border: 5px white solid;
-  /* background-image: radial-gradient(
-    circle farthest-corner at 50.4% 50.5%,
-    #ffe2ea 0%,
-    ${MAIN_COLOR} 80%
-  ); */
-  background-color: white;
-`;
-
-export const Container = styled.section`
-  position: relative;
+    ${MAIN_COLOR} 10%,
+    #f765b8 45%,
+    #f765b8 55%,
+    ${MAIN_COLOR} 90%
+  );
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   width: 100%;
-  height: 100%;
+  margin-top: -20vh;
   padding: ${SECTION_PADDING};
   display: flex;
   justify-content: center;
-  /* background-image: linear-gradient(180deg, #f1008a 0%, ${MAIN_COLOR} 100%); */
 
+  /* background-image: linear-gradient(180deg, #f1008a 0%, ${MAIN_COLOR} 100%); */
   /* Mobile layout */
   @media (max-width: ${SCREEN_MOBILE}) {
     height: auto;
@@ -113,7 +98,7 @@ export const TitleSection = styled.section`
     font-weight: 300;
 
     @media (max-width: ${SCREEN_SM}) {
-      font-size: ${HEADING_SM};
+      font-size: ${HEADING_XS};
     }
 
     @media (max-width: ${SCREEN_MOBILE_SM}) {
@@ -128,6 +113,14 @@ export const TitleSection = styled.section`
         margin: 0;
         font-size: ${HEADING_XL};
         font-weight: 600;
+
+        @media (max-width: ${SCREEN_SM}) {
+          font-size: ${HEADING_MD};
+        }
+
+        @media (max-width: ${SCREEN_XS}) {
+          font-size: ${HEADING_SM};
+        }
       }
     }
   }
@@ -140,7 +133,7 @@ export const TitleImage = styled.div`
   flex: 1;
   transform: translateX(-20%);
   > img {
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -202,6 +195,8 @@ export const Contents = styled.div`
 
     @media (max-width: ${SCREEN_XS}) {
       font-size: ${FONT_SIZE_XS};
+      margin: 1.5rem 0rem;
+      padding: 0 6rem;
     }
   }
 `;
@@ -209,11 +204,11 @@ export const Contents = styled.div`
 export const ImageContainer = styled.span`
   width: 5rem;
   @media (max-width: ${SCREEN_SM}) {
-    width: 12rem;
+    width: 5rem;
   }
 
   @media (max-width: ${SCREEN_XS}) {
-    width: 9rem;
+    width: 3rem;
   }
 
   > img {

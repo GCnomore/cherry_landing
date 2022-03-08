@@ -19,12 +19,14 @@ import {
 export const Container = styled.section`
   width: 100%;
   z-index: 2;
-
-  background-image: radial-gradient(
-    circle farthest-corner at 50.4% 50.5%,
+  background-image: linear-gradient(180deg, #f765b8 0%, ${MAIN_COLOR} 80%);
+  /* background-image: linear-gradient(180deg, #f1008a 0%, #2f23f3 100%); */
+  /* background-image: radial-gradient(
+    circle farthest-corner at 20.4% 30.5%,
     #ffe2ea 0%,
-    ${MAIN_COLOR} 80%
-  );
+    ${MAIN_COLOR} 30%,
+    #f1008a 80%
+  ); */
 `;
 
 export const Contents = styled.div`
@@ -36,7 +38,7 @@ export const Contents = styled.div`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  /* color: white; */
+  color: white;
   overflow: hidden;
   /* background-image: linear-gradient(180deg, #f1008a 0%, #2f23f3 100%); */
 
@@ -44,6 +46,13 @@ export const Contents = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 10rem;
+
+    @media (max-width: ${MAX_WIDTH_MOBILE}) {
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      margin-top: 5rem;
+    }
   }
 
   @media (max-width: ${MAX_WIDTH_MD}) {
@@ -97,6 +106,7 @@ export const IntroContainer = styled.section`
     align-items: center;
     text-align: center;
     width: 80%;
+    padding-bottom: 5rem;
   }
 
   > div {
@@ -150,15 +160,16 @@ export const VideoContainer = styled.section`
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   animation-name: fadeIn;
   animation-duration: 1.5s;
   z-index: 2;
 
   > div {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: grey;
+    aspect-ratio: 16/9;
   }
 `;
 

@@ -58,7 +58,6 @@ export default function Section1() {
           </Styled.Contents>
         </Styled.ContentContainer>
       </Wrapper>
-      <Styled.BG />
     </Styled.Container>
   );
 }
