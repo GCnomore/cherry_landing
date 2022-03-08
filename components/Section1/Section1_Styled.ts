@@ -59,11 +59,9 @@ export const Container = styled.section`
 export const ContentContainer = styled.div`
   height: 100%;
   display: flex;
-  /* flex-direction: row-reverse; */
-  justify-content: space-between;
+  height: 90vh;
+  justify-content: flex-start;
   flex-direction: column;
-  position: relative;
-  z-index: 2;
 `;
 
 export const BackLogo = styled.div`
@@ -131,14 +129,15 @@ export const TitleImage = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
-  transform: translateX(-20%);
+  transform: translateX(-10%);
   > img {
-    width: 80%;
+    width: 90%;
   }
 `;
 
 export const Contents = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-top: 4%;
 
   > h3 {
@@ -164,7 +163,7 @@ export const Contents = styled.div`
     }
 
     > div {
-      width: 100%;
+      width: fit-content;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -10,8 +10,8 @@ import Wrapper from "../Wrapper/Wrapper";
 
 export default function Section2() {
   return (
-    <Wrapper>
-      <Styled.Container>
+    <Styled.Container>
+      <Wrapper>
         <Styled.TitleSection>
           <FadeInDown>
             <h2>We Solve Your Problems</h2>
@@ -58,7 +58,7 @@ export default function Section2() {
             </Styled.SolutionItem>
           </div>
         </Styled.SolutionSection>
-      </Styled.Container>
-    </Wrapper>
+      </Wrapper>
+    </Styled.Container>
   );
 }

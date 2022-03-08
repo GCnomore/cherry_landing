@@ -14,8 +14,8 @@ import {
 export const Container = styled.div<{ bgColor?: string; bgImg?: string }>`
   display: flex;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
   height: 100%;
   background-color: ${({ bgColor }) => bgColor};
   background-image: ${({ bgImg }) => bgImg};

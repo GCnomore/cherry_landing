@@ -20,18 +20,11 @@ export const Container = styled.section`
   width: 100%;
   z-index: 2;
   background-image: linear-gradient(180deg, #f765b8 0%, ${MAIN_COLOR} 80%);
-  /* background-image: linear-gradient(180deg, #f1008a 0%, #2f23f3 100%); */
-  /* background-image: radial-gradient(
-    circle farthest-corner at 20.4% 30.5%,
-    #ffe2ea 0%,
-    ${MAIN_COLOR} 30%,
-    #f1008a 80%
-  ); */
 `;
 
 export const Contents = styled.div`
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +33,6 @@ export const Contents = styled.div`
   margin-right: auto;
   color: white;
   overflow: hidden;
-  /* background-image: linear-gradient(180deg, #f1008a 0%, #2f23f3 100%); */
 
   > div:nth-child(2) {
     display: flex;
@@ -87,6 +79,7 @@ export const MenuContainer = styled.section`
   > div:first-child {
     width: 5rem;
     margin-bottom: 2rem;
+    filter: ${FILTER_SHADOW};
   }
 `;
 
@@ -145,6 +138,7 @@ export const LogoContainer = styled.section`
   width: 20rem;
   margin-bottom: 1rem;
   z-index: 2;
+  filter: ${FILTER_SHADOW};
 
   @media (max-width: ${MAX_WIDTH_MD}) {
     width: 15rem;

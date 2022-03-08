@@ -24,13 +24,21 @@ import {
 } from "../../utils/contants";
 
 export const Container = styled.section`
-  /* height: 100vh; */
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: ${SECTION_PADDING};
+  margin-top: -26vh;
+  /* background-image: linear-gradient(
+    232deg,
+    ${MAIN_COLOR} 10%,
+    #f765b8 45%,
+    #f765b8 55%,
+    ${MAIN_COLOR} 90%
+  ); */
+  background-image: linear-gradient(180deg, #f765b8 0%, ${MAIN_COLOR} 80%);
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
