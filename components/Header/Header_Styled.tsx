@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import {
+  FILTER_SHADOW,
   FONT_SIZE_MOBILE,
   FONT_SIZE_SM,
   FONT_SIZE_XS,
   HEADING_MD,
   HEADING_SM,
+  MAIN_COLOR,
   MAX_WIDTH_INNER_MD,
   MAX_WIDTH_MD,
   MAX_WIDTH_MOBILE,
@@ -16,12 +18,27 @@ import {
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  z-index: 2;
+
+  background-image: radial-gradient(
+    circle farthest-corner at 50.4% 50.5%,
+    #ffe2ea 0%,
+    ${MAIN_COLOR} 80%
+  );
+`;
+
+export const Contents = styled.div`
+  width: 100%;
+  height: 95vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  /* color: white; */
+  overflow: hidden;
+  /* background-image: linear-gradient(180deg, #f1008a 0%, #2f23f3 100%); */
 
   > div:nth-child(2) {
     display: flex;
@@ -46,6 +63,9 @@ export const MenuContainer = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  top: 2%;
+  z-index: 2;
 
   > div {
     display: flex;
@@ -70,6 +90,8 @@ export const IntroContainer = styled.section`
   animation-name: fadeInLeft;
   animation-duration: 1.5s;
   flex-wrap: wrap;
+  padding-bottom: 20rem;
+  z-index: 2;
 
   @media (max-width: ${MAX_WIDTH_MOBILE}) {
     align-items: center;
@@ -92,6 +114,7 @@ export const IntroContainer = styled.section`
       font-size: ${HEADING_MD};
       margin: 0 0 1rem 0;
       padding: 0;
+      filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.3));
 
       @media (max-width: ${MAX_WIDTH_MD}) {
         font-size: ${HEADING_SM};
@@ -111,6 +134,7 @@ export const IntroContainer = styled.section`
 export const LogoContainer = styled.section`
   width: 20rem;
   margin-bottom: 1rem;
+  z-index: 2;
 
   @media (max-width: ${MAX_WIDTH_MD}) {
     width: 15rem;
@@ -129,6 +153,7 @@ export const VideoContainer = styled.section`
   align-items: center;
   animation-name: fadeIn;
   animation-duration: 1.5s;
+  z-index: 2;
 
   > div {
     width: 100%;

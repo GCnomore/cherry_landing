@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   MAX_WIDTH_LG,
   MAX_WIDTH_MD,
@@ -11,9 +11,14 @@ import {
   SCREEN_XS,
 } from "../../utils/contants";
 
-export const Container = styled.div<{ bgColor?: string }>`
+export const Container = styled.div<{ bgColor?: string; bgImg?: string }>`
   display: flex;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
   background-color: ${({ bgColor }) => bgColor};
+  background-image: ${({ bgImg }) => bgImg};
 `;
 
 export const Wrapper = styled.div`
@@ -21,6 +26,7 @@ export const Wrapper = styled.div`
   padding: ${PADDING_MD};
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 
   @media (max-width: ${SCREEN_XS}) {
     max-width: ${MAX_WIDTH_MD};

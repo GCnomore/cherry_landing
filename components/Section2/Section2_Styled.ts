@@ -20,6 +20,7 @@ import {
   SCREEN_LG,
   SCREEN_SM,
   SCREEN_XS,
+  SECTION_PADDING,
 } from "../../utils/contants";
 
 export const Container = styled.section`
@@ -29,6 +30,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: ${SECTION_PADDING};
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_XS}) {
@@ -41,7 +43,6 @@ export const TitleSection = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 3rem;
   color: white;
   filter: ${FILTER_SHADOW};
 

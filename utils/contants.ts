@@ -31,6 +31,7 @@ export const PADDING_LG = "150px 0 0";
 export const PADDING_MD = "80px 30px 0";
 export const PADDING_SM = "50px 25px 175px";
 export const PADDING_INNER_MOBILE = "35px 20px 75px";
+export const SECTION_PADDING = "8rem 0";
 
 export const MAX_WIDTH_LG = "1140px";
 export const MAX_WIDTH_MD = "1024px";

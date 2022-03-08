@@ -21,11 +21,45 @@ import {
   SCREEN_MOBILE_SM,
   SCREEN_SM,
   SCREEN_XS,
+  SECTION_PADDING,
 } from "../../utils/contants";
 
+export const BG = styled.div`
+  height: 124vh;
+  width: 200vw;
+  position: absolute;
+  margin-left: 10vw;
+  margin-top: -12vw;
+  transform: rotateZ(-5deg);
+  background-image: radial-gradient(
+    circle farthest-corner at 10.2% 55.8%,
+    rgba(252, 37, 103, 1) 0%,
+    rgba(250, 38, 151, 1) 46.2%,
+    rgba(186, 8, 181, 1) 90.1%
+  );
+  /* background-image: linear-gradient(
+    90deg,
+    ${MAIN_COLOR} 20%,
+    #ffe2ea 50%,
+    ${MAIN_COLOR} 100%
+  ); */
+  border: 5px white solid;
+  /* background-image: radial-gradient(
+    circle farthest-corner at 50.4% 50.5%,
+    #ffe2ea 0%,
+    ${MAIN_COLOR} 80%
+  ); */
+  background-color: white;
+`;
+
 export const Container = styled.section`
+  position: relative;
   width: 100%;
+  height: 100%;
+  padding: ${SECTION_PADDING};
   display: flex;
+  justify-content: center;
+  /* background-image: linear-gradient(180deg, #f1008a 0%, ${MAIN_COLOR} 100%); */
 
   /* Mobile layout */
   @media (max-width: ${SCREEN_MOBILE}) {
@@ -43,7 +77,6 @@ export const ContentContainer = styled.div`
   /* flex-direction: row-reverse; */
   justify-content: space-between;
   flex-direction: column;
-
   position: relative;
   z-index: 2;
 `;
