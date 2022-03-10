@@ -29,9 +29,9 @@ export default function Header() {
       </div>
       <div className="flex md:flex-row flex-col justify-between items-center md:mt-36">
         <div className="flex flex-col w-3/4 md:mr-6 md:mb-0 mb-16">
-          <h1 className="w-full mb:text-start text-center m-0 2xl:text-6xl xl:text-5xl lg:text-3xl md:text-xl text-4xl">
+          <h1 className="cr-section-title w-full mb:text-start text-center m-0">
             One-click checkout,
-            <br /> wherever you shop
+            <br /> <strong className="cr-main-color">wherever</strong> you shop
           </h1>
           <article className="w-full mb:text-start text-center mb:m-0 mt-4">
             Labore occaecat sit eiusmod Lorem excepteur eu et reprehenderit esse

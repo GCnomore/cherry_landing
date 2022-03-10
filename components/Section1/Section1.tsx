@@ -25,41 +25,44 @@ export default function Section1() {
       <div className="flex flex-col text-white text-center">
         <h2>Mobile shopping is great, but</h2>
         <FadeInDown delay={0.5}>
-          <h2>Checkout is frustrating</h2>
+          <h2 className="cr-section-title">Checkout is frustrating</h2>
         </FadeInDown>
       </div>
 
-      <ul className="flex flex-col sm:flex-row justify-between items-center list-none w-full">
-        <FadeInDown>
-          <li className="flex flex-col justify-center items-center text-white text-center">
+      <ul className="cr-content-mt flex flex-col sm:flex-row justify-between items-center list-none w-full">
+        <li className="flex flex-col justify-center items-center text-white text-center w-full h-80">
+          <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/not-equal.svg"}
-              className="w-12 md:w-20 xl:w-24"
+              className="w-12 md:w-20 xl:w-6/12"
             />
-            <span className="w-36 md:w-40 xl:w-44">
+            <span className="w-36 md:w-40 xl:w-72 mt-8">
               Each store’s checkout experience is different
             </span>
-          </li>
-        </FadeInDown>
-        <FadeInDown>
-          <li className="flex flex-col justify-center items-center text-white text-center">
+          </FadeInDown>
+        </li>
+        <li className="flex flex-col justify-center items-center text-white text-center w-full h-80">
+          <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/block-maze.svg"}
-              className="w-12 md:w-20 xl:w-24"
+              className="w-12 md:w-20 xl:w-6/12"
             />
-            <span className="w-36 md:w-40 xl:w-44">
+            <span className="w-36 md:w-40 xl:w-72 mt-8">
               The checkout process isn’t always customer friendly
             </span>
-          </li>
-        </FadeInDown>
-        <FadeInDown>
-          <li className="flex flex-col justify-center items-center text-white text-center">
-            <img src={"/icons/infinity.svg"} className="w-12 md:w-20 xl:w-24" />
-            <span className="w-36 md:w-40 xl:w-44">
+          </FadeInDown>
+        </li>
+        <li className="flex flex-col justify-center items-center text-white text-center w-full h-80">
+          <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
+            <img
+              src={"/icons/infinity.svg"}
+              className="w-12 md:w-20 xl:w-6/12"
+            />
+            <span className="w-36 md:w-40 xl:w-72 mt-8">
               You have to enter personal information over and over again
             </span>
-          </li>
-        </FadeInDown>
+          </FadeInDown>
+        </li>
       </ul>
     </section>
   );
