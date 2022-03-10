@@ -15,16 +15,25 @@ import { HEADING_SIZE } from "../../utils/contants";
 
 export default function Header() {
   return (
-    <main className="cr-section-gap container flex flex-col justify-start items-center mb-32">
+    <main
+      id="home"
+      className="cr-section-gap container flex flex-col justify-start items-center mb-32"
+    >
       <div className="flex flex-col justify-center items-center">
         <div className="flex md:w-40 w-32 md:mt-0 mt-12">
           <Image src={Logo} alt="logo" />
         </div>
         <div className="flex justify-between text-black mt-4 md:mb-0 mb-16">
-          <span className="md:mr-16 mr-5">Home</span>
-          <span className="md:mr-16 mr-5">What we do</span>
-          <span className="md:mr-16 mr-5">Features</span>
-          <span>Contact us?</span>
+          <a href="#home" className="md:mr-16 mr-5">
+            Home
+          </a>
+          <a href="#whatwedo" className="md:mr-16 mr-5">
+            What we do
+          </a>
+          <a href="#features" className="md:mr-16 mr-5">
+            Features
+          </a>
+          <a>Contact us?</a>
         </div>
       </div>
       <div className="flex md:flex-row flex-col justify-between items-center md:mt-36">
