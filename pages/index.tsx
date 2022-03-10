@@ -8,8 +8,8 @@ const IndexPage = () => (
   <Layout title="Cherry | One-click checkout, wherever you shop">
     <Header />
     <Section1 />
-    <Section2 />
-    <Section3 />
+    {/* <Section2 /> */}
+    {/* <Section3 /> */}
   </Layout>
 );
 

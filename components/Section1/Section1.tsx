@@ -6,58 +6,41 @@ import LogoWhite from "../../public/icons/logo_icon_white.png";
 
 import * as Styled from "./Section1_Styled";
 import Wrapper from "../Wrapper/Wrapper";
+import { Col, Container, Image, Row } from "react-bootstrap";
 
 export default function Section1() {
   return (
-    <Styled.Container>
-      <Wrapper bgImg="">
+    <Styled.Wrapper fluid as="section">
+      <Wrapper>
+        <Styled.TitleContainer>
+          <FadeInDown delay={0.5}>
+            <Col>
+              <Styled.Heading1>Mobile shopping is great, but</Styled.Heading1>
+            </Col>
+          </FadeInDown>
+          <FadeInDown delay={0.5}>
+            <Col>
+              <Styled.Heading2>Checkout is frustrating</Styled.Heading2>
+            </Col>
+          </FadeInDown>
+        </Styled.TitleContainer>
         <Styled.ContentContainer>
-          <Styled.TitleSection>
-            <h2>Mobile shopping is great, but</h2>
-            <FadeInDown delay={0.5}>
-              <h2>Checkout is frustrating</h2>
-            </FadeInDown>
-          </Styled.TitleSection>
-          {/* <Styled.BackLogo>
-          <Image alt="white logo" src={LogoWhite} />
-        </Styled.BackLogo> */}
-          <Styled.Contents>
-            <ul>
-              <FadeInDown>
-                <li>
-                  <Styled.ImageContainer>
-                    <img src={"/icons/not-equal.svg"} />
-                  </Styled.ImageContainer>
-                  <span>Each store’s checkout experience is different</span>
-                </li>
-              </FadeInDown>
-              <FadeInDown>
-                <li>
-                  <Styled.ImageContainer>
-                    <img src={"/icons/block-maze.svg"} />
-                  </Styled.ImageContainer>
-                  <span>
-                    The checkout process isn’t always customer friendly
-                  </span>
-                </li>
-              </FadeInDown>
-              <FadeInDown>
-                <li>
-                  <Styled.ImageContainer>
-                    <img src={"/icons/infinity.svg"} />
-                  </Styled.ImageContainer>
-                  <span>
-                    You have to enter personal information over and over again
-                  </span>
-                </li>
-              </FadeInDown>
-            </ul>
-            <Styled.TitleImage>
-              <img src={"/images/checkout.png"} alt="checkout" />
-            </Styled.TitleImage>
+          <Styled.Contents lg="3" md="2" xs="8">
+            <Image src="/icons/not-equal.svg" width={"100%"} />
+            <span>Each store’s checkout experience is different</span>
+          </Styled.Contents>
+          <Styled.Contents lg="3" md="2" xs="8">
+            <Image src="/icons/block-maze.svg" width={"100%"} />
+            <span>The checkout process isn’t always customer friendly</span>
+          </Styled.Contents>
+          <Styled.Contents lg="3" md="2" xs="8">
+            <Image src="/icons/infinity.svg" width={"100%"} />
+            <span>
+              You have to enter personal information over and over again
+            </span>
           </Styled.Contents>
         </Styled.ContentContainer>
       </Wrapper>
-    </Styled.Container>
+    </Styled.Wrapper>
   );
 }

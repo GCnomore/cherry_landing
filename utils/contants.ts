@@ -1,7 +1,10 @@
+import { Container } from "react-bootstrap";
+import styled from "styled-components";
+
 //* =====Styles=====
 export const PADDING_Y_LG = "10%";
 export const PADDING_Y_MD = "5%";
-export const MAIN_COLOR = "#D2023D";
+export const MAIN_COLOR = "#DA2E5E";
 export const BG_COLOR = "#fef2e4";
 
 export const FONT_FAMILY = "'Poppins', sans-serif;";
@@ -20,10 +23,13 @@ export const FONT_SIZE_SM = "1.2rem";
 export const FONT_SIZE_XS = "1rem";
 export const FONT_SIZE_MOBILE = "13px";
 
-export const SCREEN_LG = "1900px";
-export const SCREEN_SM = "1440px";
-
+export const SCREEN_XXL = "1400px";
+export const SCREEN_XL = "1200px";
+export const SCREEN_LG = "992px";
+export const SCREEN_MD = "768px";
+export const SCREEN_SM = "576px";
 export const SCREEN_XS = "1024px";
+
 export const SCREEN_MOBILE = "767px";
 export const SCREEN_MOBILE_SM = "544px";
 

@@ -19,7 +19,8 @@ import {
 export const Container = styled.section`
   width: 100%;
   z-index: 2;
-  background-image: linear-gradient(180deg, #f765b8 0%, ${MAIN_COLOR} 80%);
+  background-color: ${MAIN_COLOR};
+  /* background-image: linear-gradient(180deg, #f765b8 0%, ${MAIN_COLOR} 80%); */
 `;
 
 export const Contents = styled.div`

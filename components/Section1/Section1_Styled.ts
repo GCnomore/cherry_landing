@@ -1,4 +1,12 @@
-import styled from "styled-components";
+import styled, { StyledComponent } from "styled-components";
+import {
+  Col,
+  Container,
+  ContainerProps,
+  Image,
+  Row,
+  RowProps,
+} from "react-bootstrap";
 
 import BgImg from "../../assets/images/image4.png";
 import {
@@ -17,20 +25,16 @@ import {
   PADDING_Y_LG,
   PADDING_Y_MD,
   SCREEN_LG,
+  SCREEN_MD,
   SCREEN_MOBILE,
   SCREEN_MOBILE_SM,
   SCREEN_SM,
   SCREEN_XS,
   SECTION_PADDING,
 } from "../../utils/contants";
+import { BsPrefixRefForwardingComponent } from "react-bootstrap/esm/helpers";
 
-export const Container = styled.section`
-  /* background-image: radial-gradient(
-    circle farthest-corner at 10.2% 55.8%,
-    rgba(252, 37, 103, 1) 0%,
-    rgba(250, 38, 151, 1) 46.2%,
-    rgba(186, 8, 181, 1) 90.1%
-  ); */
+export const Wrapper = styled(Container)`
   background-image: linear-gradient(
     90deg,
     ${MAIN_COLOR} 10%,
@@ -40,13 +44,12 @@ export const Container = styled.section`
   );
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   width: 100%;
-  margin-top: -20vh;
   padding: ${SECTION_PADDING};
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
-  /* background-image: linear-gradient(180deg, #f1008a 0%, ${MAIN_COLOR} 100%); */
-  /* Mobile layout */
   @media (max-width: ${SCREEN_MOBILE}) {
     height: auto;
     position: relative;
@@ -56,12 +59,92 @@ export const Container = styled.section`
   }
 `;
 
-export const ContentContainer = styled.div`
+export const TitleContainer = styled(Row)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  filter: ${FILTER_SHADOW};
+`;
+
+export const Heading1 = styled.h2`
+  margin: 0;
+  font-size: ${HEADING_XS};
+  font-weight: 300;
+  text-align: center;
+
+  @media (max-width: ${SCREEN_SM}) {
+    font-size: ${HEADING_XS};
+  }
+
+  @media (max-width: ${SCREEN_MOBILE_SM}) {
+    font-size: ${HEADING_XS};
+  }
+`;
+
+export const Heading2 = styled.h2`
+  color: white;
+  margin: 0;
+  font-size: ${HEADING_XL};
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: ${SCREEN_SM}) {
+    font-size: ${HEADING_MD};
+  }
+
+  @media (max-width: ${SCREEN_XS}) {
+    font-size: ${HEADING_SM};
+  }
+`;
+
+export const ContentContainer = styled(Row)`
+  height: 100%;
   height: 100%;
   display: flex;
-  height: 90vh;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin-top: 10rem;
+
+  @media (max-width: ${SCREEN_MD}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20vw;
+  }
+`;
+
+export const Contents = styled(Col)`
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  margin: 1.5rem 2rem;
+  font-size: ${FONT_SIZE_SM};
+  text-align: center;
+
+  > span {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: ${SCREEN_MD}) {
+    /* width: 100%; */
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width: ${SCREEN_SM}) {
+    font-size: ${FONT_SIZE_SM};
+  }
+
+  @media (max-width: ${SCREEN_XS}) {
+    font-size: ${FONT_SIZE_XS};
+  }
 `;
 
 export const BackLogo = styled.div`
@@ -81,49 +164,6 @@ export const BackLogo = styled.div`
   }
 `;
 
-export const TitleSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: white;
-  filter: ${FILTER_SHADOW};
-
-  > h2 {
-    margin: 0;
-    font-size: ${HEADING_XS};
-    font-weight: 300;
-
-    @media (max-width: ${SCREEN_SM}) {
-      font-size: ${HEADING_XS};
-    }
-
-    @media (max-width: ${SCREEN_MOBILE_SM}) {
-      font-size: ${HEADING_XS};
-    }
-  }
-
-  > div {
-    &:nth-child(2) {
-      > h2:last-child {
-        color: white;
-        margin: 0;
-        font-size: ${HEADING_XL};
-        font-weight: 600;
-
-        @media (max-width: ${SCREEN_SM}) {
-          font-size: ${HEADING_MD};
-        }
-
-        @media (max-width: ${SCREEN_XS}) {
-          font-size: ${HEADING_SM};
-        }
-      }
-    }
-  }
-`;
-
 export const TitleImage = styled.div`
   display: flex;
   justify-content: center;
@@ -132,86 +172,5 @@ export const TitleImage = styled.div`
   transform: translateX(-10%);
   > img {
     width: 90%;
-  }
-`;
-
-export const Contents = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4%;
-
-  > h3 {
-    font-size: ${HEADING_SM};
-    margin: 0;
-    font-style: italic;
-
-    @media (max-width: ${SCREEN_SM}) {
-      font-size: ${HEADING_XS};
-    }
-  }
-
-  ul {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex: 1;
-
-    @media (max-width: ${SCREEN_MOBILE}) {
-      flex-direction: column;
-      padding: 0 20vw;
-    }
-
-    > div {
-      width: fit-content;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media (max-width: ${SCREEN_MOBILE}) {
-        margin: 2rem 0;
-      }
-    }
-  }
-
-  li {
-    width: 100%;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
-    margin: 1.5rem 2rem;
-    padding: 0 7rem;
-    font-size: ${FONT_SIZE_SM};
-    text-align: center;
-
-    @media (max-width: ${SCREEN_SM}) {
-      font-size: ${FONT_SIZE_SM};
-    }
-
-    @media (max-width: ${SCREEN_XS}) {
-      font-size: ${FONT_SIZE_XS};
-      margin: 1.5rem 0rem;
-      padding: 0 6rem;
-    }
-  }
-`;
-
-export const ImageContainer = styled.span`
-  width: 5rem;
-  @media (max-width: ${SCREEN_SM}) {
-    width: 5rem;
-  }
-
-  @media (max-width: ${SCREEN_XS}) {
-    width: 3rem;
-  }
-
-  > img {
-    width: 100%;
-    filter: ${FILTER_SHADOW};
   }
 `;
