@@ -46,3 +46,6 @@ export const FILTER_SHADOW = "drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.6))";
 
 // background-color: #4158D0;
 // background-image: linear-gradient(350deg, #4158D0 0%, #D2023D 46%, #fef2e4 100%);
+
+export const HEADING_SIZE =
+  "2xl:text-6xl xl:text-5xl lg:text-4xl md:text-2xl text-4xl";
