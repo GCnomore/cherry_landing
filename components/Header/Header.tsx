@@ -15,7 +15,7 @@ import { HEADING_SIZE } from "../../utils/contants";
 
 export default function Header() {
   return (
-    <main className="container flex flex-col justify-start items-center md:py-16 mb-32">
+    <main className="cr-section-gap container flex flex-col justify-start items-center mb-32">
       <div className="flex flex-col justify-center items-center">
         <div className="flex md:w-40 w-32 md:mt-0 mt-12">
           <Image src={Logo} alt="logo" />
@@ -39,7 +39,7 @@ export default function Header() {
             fugiat magna fugiat mollit ad laborum. Aute deserunt
           </article>
         </div>
-        <div className="flex w-3/5 h-full aspect-video md:ml-6">
+        <div className="flex xl:w-3/5 md:w-2/4 w-4/5 h-full aspect-video md:ml-6">
           <iframe
             width="100%"
             height="100%"

@@ -10,7 +10,7 @@ import Wrapper from "../Wrapper/Wrapper";
 
 export default function Section2() {
   return (
-    <section className="container flex flex-col w-full h-full ">
+    <section className="cr-section-gap container flex flex-col w-full h-full ">
       <div className="flex flex-col w-full">
         <FadeInDown>
           <h2 className="cr-section-title text-center">

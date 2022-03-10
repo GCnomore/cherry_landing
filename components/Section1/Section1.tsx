@@ -21,7 +21,7 @@ import Wrapper from "../Wrapper/Wrapper";
 
 export default function Section1() {
   return (
-    <section className="container flex flex-col justify-center items-center bg-black ">
+    <section className="cr-section-gap container flex flex-col justify-center items-center bg-black ">
       <div className="flex flex-col text-white text-center">
         <h2>Mobile shopping is great, but</h2>
         <FadeInDown delay={0.5}>
@@ -34,10 +34,12 @@ export default function Section1() {
           <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/not-equal.svg"}
-              className="w-12 md:w-20 xl:w-6/12"
+              className="w-1/4 sm:w-20 md:w-2/5 xl:w-6/12"
             />
-            <span className="w-36 md:w-40 xl:w-72 mt-8">
-              Each store’s checkout experience is different
+            <span className="w-3/5 sm:w-36 md:w-40 xl:w-72 mt-8">
+              Each store’s{" "}
+              <strong className="cr-main-color">checkout experience</strong> is
+              different
             </span>
           </FadeInDown>
         </li>
@@ -45,10 +47,11 @@ export default function Section1() {
           <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/block-maze.svg"}
-              className="w-12 md:w-20 xl:w-6/12"
+              className="w-1/4 sm:w-20 md:w-2/5 xl:w-6/12"
             />
-            <span className="w-36 md:w-40 xl:w-72 mt-8">
-              The checkout process isn’t always customer friendly
+            <span className="w-3/5 sm:w-36 md:w-40 xl:w-72 mt-8">
+              The checkout process isn’t always{" "}
+              <strong className="cr-main-color">customer friendly</strong>
             </span>
           </FadeInDown>
         </li>
@@ -56,10 +59,11 @@ export default function Section1() {
           <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/infinity.svg"}
-              className="w-12 md:w-20 xl:w-6/12"
+              className="w-1/4 sm:w-20 md:w-2/5 xl:w-6/12"
             />
-            <span className="w-36 md:w-40 xl:w-72 mt-8">
-              You have to enter personal information over and over again
+            <span className="w-3/5 sm:w-36 md:w-40 xl:w-72 mt-8">
+              You have to enter personal information{" "}
+              <strong className="cr-main-color">over and over again</strong>
             </span>
           </FadeInDown>
         </li>
