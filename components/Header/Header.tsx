@@ -14,11 +14,11 @@ import Wrapper from "../Wrapper/Wrapper";
 
 export default function Header() {
   return (
-    <section className="container flex flex-column justify-start items-center">
-      <div className="flex flex-column justify-center items-center">
-        <div>
+    <section className="container flex flex-col justify-start items-center">
+      <div className="flex flex-col justify-center items-center">
+        {/* <div>
           <Image src={LogoIconWhite} alt="logo" />
-        </div>
+        </div> */}
         <div className="flex justify-between text-white">
           <span>Home</span>
           <span>What we do</span>
@@ -27,7 +27,7 @@ export default function Header() {
         </div>
       </div>
       <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-column w-full">
+        <div className="flex flex-col w-full">
           <h1 className="w-full text-center m-0">
             One-click checkout,
             <br /> wherever you shop

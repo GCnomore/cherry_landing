@@ -19,7 +19,7 @@ const Layout = ({ children, title }: Props) => (
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
     </Head>
-    <Container>{children}</Container>
+    {children}
     <footer></footer>
   </div>
 );
