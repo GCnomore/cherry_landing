@@ -8,7 +8,7 @@ interface FadeInDownProps {
 
 export default function FadeInDown({
   children,
-  twClass,
+  twClass = "",
   delay = 0.2,
 }: FadeInDownProps) {
   const [_fadeIn, _setFadeIn] = useState<boolean>(false);
