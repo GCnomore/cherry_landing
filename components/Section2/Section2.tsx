@@ -34,7 +34,7 @@ export default function Section2() {
             <div>
               <Image alt="click" src={ClickIcon} />
             </div>
-            <div className="flex flex-col w-full h-full">
+            <div className="flex flex-col w-full h-full md:items-start items-center">
               <span className="cr-section-subTitle">ONE CLICK</span>
               <span>
                 Makes checkout simple and uniform wherever a user shop
@@ -47,7 +47,7 @@ export default function Section2() {
             <div>
               <Image alt="click" src={FormIcon} />
             </div>
-            <div className="flex flex-col w-full h-full">
+            <div className="flex flex-col w-full h-full md:items-start items-center">
               <span className="cr-section-subTitle">NO MORE FORMS</span>
               <span>
                 Requires personal information only once at Cherry sign up
@@ -60,7 +60,7 @@ export default function Section2() {
             <div>
               <Image alt="click" src={AllInOnekIcon} />
             </div>
-            <div className="flex flex-col w-full h-full">
+            <div className="flex flex-col w-full h-full md:items-start items-center">
               <span className="cr-section-subTitle">ALL-IN-ONE CART</span>
               <span>Checks out products from multiple stores in one go</span>
             </div>
