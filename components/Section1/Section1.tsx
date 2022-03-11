@@ -30,7 +30,7 @@ export default function Section1() {
       </div>
 
       <ul className="cr-content-mt flex flex-col lg:flex-row justify-between items-center list-none w-full">
-        <li className="flex flex-col justify-center items-center text-black text-center w-full sm:h-80 h-48">
+        <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
           <FadeInDown twClass="flex flex-col w-full h-full justify-start items-center">
             <img
               src={"/icons/not-equal.svg"}
@@ -43,7 +43,7 @@ export default function Section1() {
             </span>
           </FadeInDown>
         </li>
-        <li className="flex flex-col justify-center items-center text-black text-center w-full sm:h-80 h-48">
+        <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
           <FadeInDown
             delay={0.4}
             twClass="flex flex-col w-full h-full justify-start items-center"
@@ -58,7 +58,7 @@ export default function Section1() {
             </span>
           </FadeInDown>
         </li>
-        <li className="flex flex-col justify-center items-center text-black text-center w-full sm:h-80 h-48">
+        <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
           <FadeInDown
             delay={0.6}
             twClass="flex flex-col w-full h-full justify-start items-center"

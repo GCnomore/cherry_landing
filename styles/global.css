@@ -74,7 +74,7 @@ body {
   }
 
   .cr-section-gap {
-    @apply sm:py-16 py-12;
+    @apply sm:py-28 py-20;
   }
 
   .cr-main-color {

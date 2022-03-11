@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Layout = ({ children, title }: Props) => (
-  <div>
+  <div className="flex flex-col">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
