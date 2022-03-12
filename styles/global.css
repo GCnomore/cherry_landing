@@ -48,15 +48,37 @@ body {
     rgba(133, 128, 204, 1) 100%
   );
    */
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgba(254, 242, 228, 1) 0%,
     rgba(210, 2, 61, 1) 25%,
     rgba(255, 255, 255, 1) 65%,
     rgba(213, 44, 209, 1) 80%,
     rgba(133, 128, 204, 1) 100%
-  );
+  ); */
+
+  background: linear-gradient(to right, #f45c43, #eb3349);
   color: white;
+}
+
+.backLogoCont {
+  position: absolute;
+  top: 55%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 70rem;
+  z-index: 1;
+}
+
+.backLogo {
+  filter: drop-shadow(0px 0px 8px black) contrast(0.9) opacity(0.3);
+  /* z-index: -1; */
+
+  /* @media (max-width: ${SCREEN_XS}) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+  } */
 }
 
 @layer components {

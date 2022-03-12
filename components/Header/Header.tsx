@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 import Logo from "../../public/images/logo.png";
-import LogoWhite from "../../public/images/logo_text_white.png";
+import LogoWhite from "../../public/images/logo_white.png";
 import LogoIcon from "../../public/images/logo_icon_color.png";
-import LogoIconWhite from "../../public/images/logo_icon_white.png";
+import LogoIconWhite from "../../public/icons/logo_icon_white.png";
 import * as Styled from "./Header_Styled";
 
 <Styled.LogoContainer>
@@ -14,10 +14,10 @@ import * as Styled from "./Header_Styled";
 export default function Header() {
   return (
     <main id="home" className="cr-hero-bg">
-      <div className="cr-section-gap container flex flex-col justify-start items-center mb-32 h-screen">
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex md:w-40 w-32 md:mt-0 mt-12">
-            <Image src={Logo} alt="logo" />
+      <div className=" sm:py-16 py-8 container flex flex-col justify-start items-center mb-32 h-screen">
+        <div className="flex flex-col justify-center items-center z-10">
+          <div className="flex sm:w-40 xs:w-32 w-24">
+            <Image src={LogoWhite} alt="logo" />
           </div>
           <div className="flex justify-between text-black mt-4 md:mb-0 mb-16 sm:text-base xs:text-sm text-xs">
             <a href="#home" className="md:mr-16 mr-5">
@@ -32,7 +32,7 @@ export default function Header() {
             <a>Contact us?</a>
           </div>
         </div>
-        <div className="flex h-full lg:flex-row flex-col lg:justify-between justify-center items-center">
+        <div className="flex h-full lg:flex-row flex-col lg:justify-between justify-center items-center z-10">
           <div className="flex flex-col lg:w-2/4 lg:mr-6 lg:mb-0 mb-16">
             <h1 className="cr-section-title w-full mb:text-start text-center m-0">
               One-click checkout,
@@ -45,6 +45,7 @@ export default function Header() {
               Veniam dolor fugiat magna fugiat mollit ad laborum. Aute deserunt
             </article>
           </div>
+
           <div className="flex xl:w-3/5 lg:w-2/4 w-4/5 h-fit aspect-video lg:ml-6">
             <iframe
               width="100%"
@@ -57,6 +58,13 @@ export default function Header() {
             ></iframe>
           </div>
         </div>
+      </div>
+      <div className="backLogoCont">
+        <img
+          className="backLogo"
+          alt="white logo"
+          src={"icons/logo_icon_white.png"}
+        />
       </div>
     </main>
   );
