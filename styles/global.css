@@ -1,33 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --main-color: #d2023d;
+  --cr-font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--cr-font-family);
 }
 
 .fadeInDown {
   animation: fadeInDown 1s ease-out;
 }
 
-.__delay {
-  animation-delay: 1s;
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-  animation-duration: 1.5s;
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-  animation-duration: 1.5s;
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1.5s;
-}
-
-.hidden {
+.hide {
   opacity: 0 !important;
+}
+
+.cr-hero-bg {
+  background: linear-gradient(to right, #ca7c92, var(--main-color));
+  color: white;
+}
+
+.section1 {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.section2 {
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.section3 {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@layer components {
+  .cr-section-title {
+    @apply 2xl:text-5xl xs:text-4xl text-3xl font-bold text-center;
+    /* filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.6)); */
+  }
+
+  .cr-section-subTitle {
+    @apply 2xl:text-3xl md:text-2xl text-xl font-bold;
+  }
+
+  .cr-section-subTitle-sm {
+    @apply 2xl:text-xl xl:text-lg lg:text-base md:text-sm text-lg font-bold;
+  }
+
+  .cr-section-gap {
+    @apply sm:py-28 py-20;
+  }
+
+  .cr-main-color {
+    color: #d2023d;
+  }
+
+  .cr-content-mt {
+    @apply md:mt-28 mt-16;
+  }
+
+  .cr-text {
+    @apply 2xl:text-lg xl:text-base lg:text-sm xs:text-base text-sm;
+  }
+
+  .cr-backLogo {
+    @apply xl:w-[60rem] lg:w-[50rem] sm:w-[30rem] w-[15rem] lg:left-[60%] left-1/2 lg:top-[55%] top-[35%];
+  }
 }

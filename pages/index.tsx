@@ -1,12 +1,12 @@
-import Header from "../components/Header/Header";
+import HeroSection from "../components/HeroSection";
 import Layout from "../components/Layout";
-import Section1 from "../components/Section1/Section1";
-import Section2 from "../components/Section2/Section2";
-import Section3 from "../components/Section3/Section3";
+import Section1 from "../components/Section1";
+import Section2 from "../components/Section2";
+import Section3 from "../components/Section3";
 
 const IndexPage = () => (
   <Layout title="Cherry | One-click checkout, wherever you shop">
-    <Header />
+    <HeroSection />
     <Section1 />
     {/* <Section2 /> */}
     {/* <Section3 /> */}
