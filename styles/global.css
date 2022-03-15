@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-  --main-color: #d2023d;
+  --main-color: #da2e5e;
   --cr-font-family: "Poppins", sans-serif;
 }
 
@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   font-family: var(--cr-font-family);
+  font-weight: 200;
 }
 
 .fadeInDown {
@@ -26,50 +27,18 @@ body {
 }
 
 .cr-hero-bg {
-  background: linear-gradient(to right, #ca7c92, var(--main-color));
+  background: linear-gradient(to right, #e23b89 33%, #721ed5);
   color: white;
 }
 
 .section1 {
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .section2 {
-  background: #d3cce3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(0.6turn, #e23b89, #721ed5);
 }
 
 .section3 {
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @layer components {
@@ -91,7 +60,7 @@ body {
   }
 
   .cr-main-color {
-    color: #d2023d;
+    color: var(--main-color);
   }
 
   .cr-content-mt {
@@ -99,10 +68,52 @@ body {
   }
 
   .cr-text {
-    @apply 2xl:text-lg xl:text-base lg:text-sm xs:text-base text-sm;
+    @apply 2xl:text-lg xl:text-lg lg:text-lg xs:text-lg text-sm;
   }
 
   .cr-backLogo {
     @apply xl:w-[60rem] lg:w-[50rem] sm:w-[30rem] w-[15rem] lg:left-[60%] left-1/2 lg:top-[55%] top-[35%];
   }
+}
+
+/* Ryan's style overwrites start */
+
+strong, .cr-section-title, .cr-section-subTitle {
+    font-weight: 400;
+}
+
+.cr-section2-text {
+    max-width: 335px;
+}
+
+.cr-section-title {
+    line-height: 3rem;
+}
+
+.elementor-divider {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.elementor-divider-separator {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #e23b89, #b10051);
+}
+/*
+.cr-hero-bg .cr-section-title{
+    text-align: left;
+}
+*/
+.cr-hero-bg .elementor-divider-separator, .section2 .elementor-divider-separator{
+    background: #fff;
+}
+
+.section2 .cr-section-title{
+    display: inline-block;
+}
+
+.section2{
+    color: #fff;
 }

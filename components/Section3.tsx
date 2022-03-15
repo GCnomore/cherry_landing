@@ -5,7 +5,13 @@ export default function Section3() {
     <section className="section3">
       <div className="cr-section-gap container flex flex-col w-full h-full">
         <div className="flex w-full h-full items-center justify-center">
-          <h2 className="cr-section-title">Product Additional User Benefits</h2>
+            <h2 className="cr-section-title">
+                <div class="elementor-divider">
+                    <div class="elementor-divider-separator">
+                    </div>
+                </div>
+                Product Additional User Benefits
+            </h2>
         </div>
         <div className="cr-content-mt flex flex-col w-full h-full">
           <ul className="flex flex-col lg:flex-row w-full h-full justiy-between items-center">
@@ -21,8 +27,8 @@ export default function Section3() {
               </h3>
               <p className="cr-text mt-4">
                 Cherry will{" "}
-                <strong className="cr-main-color">automatically</strong> find
-                and apply <strong className="cr-main-color">coupon</strong>
+                <strong>automatically</strong> find
+                and apply <strong>coupon</strong>
                 codes at checkout
               </p>
             </li>
@@ -36,8 +42,8 @@ export default function Section3() {
               </h3>
               <p className="cr-text mt-4">
                 Users gain points for every dollar spent and{" "}
-                <strong className="cr-main-color">convert</strong> them to{" "}
-                <strong className="cr-main-color">gift cards and deals</strong>
+                <strong>convert</strong> them to{" "}
+                <strong>gift cards and deals</strong>
               </p>
             </li>
 
@@ -53,9 +59,9 @@ export default function Section3() {
               </h3>
               <p className="cr-text mt-4">
                 Cherry will recommend products and deals{" "}
-                <strong className="cr-main-color">based on</strong> the user’s
+                <strong>based on</strong> the user’s
                 browsing and purchasing{" "}
-                <strong className="cr-main-color">history</strong>
+                <strong>history</strong>
               </p>
             </li>
           </ul>

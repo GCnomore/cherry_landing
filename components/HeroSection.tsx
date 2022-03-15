@@ -14,15 +14,17 @@ export default function HeroSection() {
         </div>
         <div className="flex lg:h-full h-fit lg:mt-0 mt-40 lg:flex-row flex-col lg:justify-between justify-center items-center z-10">
           <div className="flex flex-col lg:w-2/4 lg:mr-6 lg:mb-0 mb-16">
-            <h1 className="cr-section-title w-full md:text-start text-center m-0 mb-4">
-              One-click checkout,
-              <br />
-              wherever you shop
+            <h1 className="cr-section-title w-full md:text-left md:text-start m-0 mb-4">
+                <div class="elementor-divider invisible md:visible">
+                    <div class="elementor-divider-separator">
+                    </div>
+                </div>
+                One-click checkout,
+                <br />
+                wherever you shop
             </h1>
-            <article className="cr-text w-full lg:text-start text-center lg:m-0 mt-4">
-              Labore occaecat sit eiusmod Lorem excepteur eu et reprehenderit
-              esse veniam consectetur qui. Ea nulla do aliqua id culpa ut.
-              Veniam dolor fugiat magna fugiat mollit ad laborum. Aute deserunt
+            <article className="cr-text w-full lg:text-start lg:m-0 mt-4">
+              Cherry is an app that empowers mobile shoppers to check out in one click wherever they shop. No more filling forms, logins, or passwords when checking out.
             </article>
           </div>
 
