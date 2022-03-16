@@ -74,46 +74,53 @@ body {
   .cr-backLogo {
     @apply xl:w-[60rem] lg:w-[50rem] sm:w-[30rem] w-[15rem] lg:left-[60%] left-1/2 lg:top-[55%] top-[35%];
   }
+
+  .cr-problem-number {
+    @apply 2xl:text-[10rem] lg:text-[8rem] text-[5rem] font-bold;
+  }
 }
 
 /* Ryan's style overwrites start */
 
-strong, .cr-section-title, .cr-section-subTitle {
-    font-weight: 400;
+strong,
+.cr-section-title,
+.cr-section-subTitle {
+  font-weight: 400;
 }
 
 .cr-section2-text {
-    max-width: 335px;
+  max-width: 335px;
 }
 
 .cr-section-title {
-    line-height: 3rem;
+  line-height: 3rem;
 }
 
 .elementor-divider {
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .elementor-divider-separator {
-    width: 50px;
-    height: 2px;
-    background: linear-gradient(to right, #e23b89, #b10051);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, #e23b89, #b10051);
 }
 /*
 .cr-hero-bg .cr-section-title{
     text-align: left;
 }
 */
-.cr-hero-bg .elementor-divider-separator, .section2 .elementor-divider-separator{
-    background: #fff;
+.cr-hero-bg .elementor-divider-separator,
+.section2 .elementor-divider-separator {
+  background: #fff;
 }
 
-.section2 .cr-section-title{
-    display: inline-block;
+.section2 .cr-section-title {
+  display: inline-block;
 }
 
-.section2{
-    color: #fff;
+.section2 {
+  color: #fff;
 }

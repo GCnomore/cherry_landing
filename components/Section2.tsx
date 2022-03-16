@@ -12,11 +12,10 @@ export default function Section2() {
       <div className="cr-section-gap container flex flex-col w-full h-full">
         <div className="text-center">
           <h2 className="cr-section-title text-center mb-5">
-              <div class="elementor-divider">
-                  <div class="elementor-divider-separator">
-                  </div>
-              </div>
-              Solution: <strong>Cherry</strong>
+            <div className="elementor-divider">
+              <div className="elementor-divider-separator"></div>
+            </div>
+            Solution: <strong>Cherry</strong>
           </h2>
           <h2 className="cr-text text-center">
             A <strong>mobile app</strong> which enables a{" "}
@@ -47,9 +46,8 @@ export default function Section2() {
                 NO MORE FORMS
               </h3>
               <span className="cr-section2-text cr-text text-center mt-2 md:mt-0 mx-auto">
-                Cherry requires personal information{" "}
-                <strong>only once</strong> at Cherry
-                sign up
+                Cherry requires personal information <strong>only once</strong>{" "}
+                at Cherry sign up
               </span>
             </div>
           </div>
@@ -62,8 +60,7 @@ export default function Section2() {
                 ONE CLICK
               </h3>
               <span className="cr-section2-text cr-text text-center mt-2 md:mt-0 mx-auto">
-                Cherry makes checkout{" "}
-                <strong>simple and uniform</strong>{" "}
+                Cherry makes checkout <strong>simple and uniform</strong>{" "}
                 wherever a user shops
               </span>
             </div>
