@@ -17,22 +17,22 @@ export default function Section1() {
         </div>
 
         <ul className="cr-content-mt mt-16 flex flex-col lg:flex-row justify-between items-center list-none w-full">
-          <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
-            <span className="cr-problem-number">1</span>
-            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-8 mt-4">
+          <li className="flex flex-col justify-start items-center text-black text-center w-full xl:h-60 lg:h-48 sm:h-60 h-48 ">
+            <span className="cr-problem-number">1.</span>
+            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-4 mt-4">
               Each store’s checkout experience is <strong>different</strong>
             </span>
           </li>
-          <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
-            <span className="cr-problem-number">2</span>
-            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-8 mt-4">
+          <li className="flex flex-col justify-start items-center text-black text-center w-full xl:h-60 lg:h-48 sm:h-60 h-48 ">
+            <span className="cr-problem-number">2.</span>
+            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-4 mt-4">
               The checkout process is <strong>not</strong> always{" "}
               <strong>customer friendly</strong>
             </span>
           </li>
-          <li className="flex flex-col justify-center items-center text-black text-center w-full xl:h-80 lg:h-48 sm:h-80 h-48 ">
-            <span className="cr-problem-number">3</span>
-            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-8 mt-4">
+          <li className="flex flex-col justify-start items-center text-black text-center w-full xl:h-60 lg:h-48 sm:h-60 h-48 ">
+            <span className="cr-problem-number">3.</span>
+            <span className="cr-text w-3/5 sm:w-2/5 lg:w-40 xl:w-72 lg:mt-4 mt-4">
               You have to <strong>enter</strong> personal information{" "}
               <strong>over and over again</strong>
             </span>

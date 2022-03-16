@@ -24,7 +24,7 @@ export default function Section2() {
         </div>
         <div className="cr-content-mt flex flex-col w-full md:px-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="w-1/2">
+            <div className="w-1/2 bg-white">
               <Image alt="click" src={AllInOne} />
             </div>
             <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center">
