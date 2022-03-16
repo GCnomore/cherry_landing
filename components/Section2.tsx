@@ -1,10 +1,8 @@
 import React from "react";
-import Image from "next/image";
 
-import OneClick from "/public/images/one_click.svg";
-import NoForms from "/public/images/no_forms.svg";
-import AllInOne from "/public/images/all_in_one.svg";
-import FadeInDown from "./FadeInDown/FadeInDown";
+import OneClick from "./images/one_click.svg";
+import NoForms from "./images/no_forms.svg";
+import AllInOne from "./images/all_in_one.svg";
 
 export default function Section2() {
   return (
@@ -25,7 +23,7 @@ export default function Section2() {
         <div className="cr-content-mt flex flex-col w-full md:px-16">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="w-1/2 bg-white">
-              <Image alt="click" src={AllInOne} />
+              <img alt="click" src={"/images/all_in_one.svg"} />
             </div>
             <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center">
               <h3 className="cr-section-title w-full text-center mb-5">
@@ -39,7 +37,7 @@ export default function Section2() {
           </div>
           <div className="flex flex-col md:flex-row-reverse justify-between items-center sm:mt-32 mt-16">
             <div className="w-1/2">
-              <Image alt="click" src={NoForms} />
+              <img alt="click" src={"/images/no_forms.svg"} />
             </div>
             <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-end items-center">
               <h3 className="cr-section-title w-full text-center mb-5">
@@ -53,7 +51,7 @@ export default function Section2() {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center sm:mt-32 mt-16">
             <div className="w-1/2">
-              <Image alt="click" src={OneClick} />
+              <img alt="click" src={"/images/one_click.svg"} />
             </div>
             <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center">
               <h3 className="cr-section-title w-full text-center mb-5">
