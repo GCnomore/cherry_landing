@@ -62,7 +62,7 @@ const Layout = ({ children, title }: Props) => (
     {children}
     <footer className="w-full flex bg-[#e4e4e4]">
       <span className="w-full md:py-14 py-8 text-center font-[300] xl:text-lg md:text-base text-sm">
-        <strong>&copy; 2022 Cherry, Inc.</strong> All rights reserved.
+        &copy; 2022 <strong>Cherry, Inc.</strong> All rights reserved.
       </span>
     </footer>
   </div>
