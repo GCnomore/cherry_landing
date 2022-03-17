@@ -26,6 +26,7 @@ const Layout = ({ children, title }: Props) => (
         content="One-click checkout, wherever you shop"
       />
       <meta name="robots" content="index, follow"></meta>
+      <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
