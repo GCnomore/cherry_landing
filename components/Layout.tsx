@@ -60,7 +60,11 @@ const Layout = ({ children, title }: Props) => (
       />
     </Head>
     {children}
-    <footer></footer>
+    <footer className="w-full flex bg-[#e4e4e4]">
+      <span className="w-full py-8 text-center">
+        <strong>&copy; 2022 Cherry, Inc. All rights reserved.</strong>
+      </span>
+    </footer>
   </div>
 );
 
