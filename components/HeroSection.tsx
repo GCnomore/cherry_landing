@@ -3,7 +3,7 @@ import React from "react";
 export default function HeroSection() {
   return (
     <main id="home" className="cr-hero-bg">
-      <div className=" sm:py-16 py-8 container flex flex-col justify-start items-center mb-32 h-screen">
+      <div className=" sm:py-16 py-8 h-[960px] w-full container flex flex-col justify-start items-center mb-32">
         <div className="flex flex-col justify-center items-center z-10">
           <div className="flex sm:w-40 xs:w-32 w-24">
             <img src="/images/logo_white.png" alt="logo" />
