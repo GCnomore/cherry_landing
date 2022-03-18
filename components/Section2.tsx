@@ -25,8 +25,8 @@ export default function Section2() {
             <div className="w-1/2 bg-white">
               <img alt="click" src={"/images/all_in_one.svg"} />
             </div>
-            <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center">
-              <h3 className="cr-section-title w-full text-center mb-5">
+            <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center lg:px-0 px-4">
+              <h3 className="cr-section-title w-full text-center mb-5 md:mt-0 mt-4">
                 ALL-IN-ONE CART
               </h3>
               <span className="cr-section2-text cr-text text-center mt-2 md:mt-0 mx-auto">
@@ -40,7 +40,7 @@ export default function Section2() {
               <img alt="click" src={"/images/no_forms.svg"} />
             </div>
             <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-end items-center">
-              <h3 className="cr-section-title w-full text-center mb-5">
+              <h3 className="cr-section-title w-full text-center mb-5 md:mt-0 mt-4">
                 NO MORE FORMS
               </h3>
               <span className="cr-section2-text cr-text text-center mt-2 md:mt-0 mx-auto">
@@ -53,8 +53,8 @@ export default function Section2() {
             <div className="w-1/2">
               <img alt="click" src={"/images/one_click.svg"} />
             </div>
-            <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center">
-              <h3 className="cr-section-title w-full text-center mb-5">
+            <div className="flex flex-col sm:w-1/2 w-3/4 h-full md:items-start items-center lg:px-0 px-4">
+              <h3 className="cr-section-title w-full text-center mb-5 md:mt-0 mt-4">
                 ONE CLICK
               </h3>
               <span className="cr-section2-text cr-text text-center mt-2 md:mt-0 mx-auto">
