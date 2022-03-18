@@ -7,7 +7,7 @@ export default function Section3() {
         <div className="flex w-full h-full items-center justify-center">
           <h2 className="cr-section-title">
             <div className="elementor-divider">
-              <div className="elementor-divider-separator"></div>
+              <div className="elementor-divider-separator divider-section3-inner"></div>
             </div>
             Product Additional User Benefits
           </h2>

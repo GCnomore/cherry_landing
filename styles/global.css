@@ -97,16 +97,23 @@ strong,
 }
 
 .elementor-divider {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 15px;
 }
 
 .elementor-divider-separator {
+  position: absolute;
+  left: 0;
   width: 50px;
   height: 2px;
   background: linear-gradient(to right, #e23b89, #b10051);
 }
+
 /*
 .cr-hero-bg .cr-section-title{
     text-align: left;
@@ -123,4 +130,32 @@ strong,
 
 .section2 {
   color: #fff;
+}
+
+@media only screen and (max-width: 369px) {
+  .divider-section1-inner {
+    right: 63%;
+    left: unset;
+  }
+}
+
+@media only screen and (max-width: 639px) and (min-width: 474px) {
+  .divider-section3-inner {
+    right: 86%;
+    left: unset;
+  }
+}
+
+@media only screen and (max-width: 474px) and (min-width: 409px) {
+  .divider-section3-inner {
+    right: 83%;
+    left: unset;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .divider-section3-inner {
+    right: 80%;
+    left: unset;
+  }
 }

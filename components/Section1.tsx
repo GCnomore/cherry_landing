@@ -6,11 +6,11 @@ export default function Section1() {
   return (
     <section id="whatwedo" className="section1">
       <div className="cr-section-gap container flex flex-col justify-center items-center">
-        <div className="flex flex-col text-black text-center">
+        <div className="flex flex-col text-black text-center w-full items-center">
           <h2 className="cr-text mb-5">Mobile shopping is great, but</h2>
           <h2 className="cr-section-title">
-            <div className="elementor-divider">
-              <div className="elementor-divider-separator"></div>
+            <div className="elementor-divider divider-section1-container">
+              <div className="elementor-divider-separator divider-section1-inner"></div>
             </div>
             Checkout is <strong className="cr-main-color">frustrating</strong>
           </h2>

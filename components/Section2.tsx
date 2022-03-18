@@ -35,7 +35,7 @@ export default function Section2() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-between items-center sm:mt-32 mt-16">
+          <div className="flex flex-col md:flex-row-reverse justify-between items-center sm:mt-32 mt-24">
             <div className="w-1/2">
               <img alt="click" src={"/images/no_forms.svg"} />
             </div>
@@ -49,7 +49,7 @@ export default function Section2() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center sm:mt-32 mt-16">
+          <div className="flex flex-col md:flex-row justify-between items-center sm:mt-32 mt-24">
             <div className="w-1/2">
               <img alt="click" src={"/images/one_click.svg"} />
             </div>

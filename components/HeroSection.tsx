@@ -2,14 +2,14 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <main id="home" className="cr-hero-bg">
-      <div className="sm:py-16 py-8 max-h-[960px] h-screen container flex flex-col justify-start items-center">
+    <main id="home" className="cr-hero-bg max-h-[960px] h-screen">
+      <div className="sm:py-16 py-8 container h-full flex flex-col justify-start items-center">
         <div className="flex flex-col justify-center items-center z-10">
           <div className="flex sm:w-40 xs:w-32 w-24">
             <img src="/images/logo_white.png" alt="logo" />
           </div>
         </div>
-        <div className="flex lg:h-full h-fit lg:mt-0 mt-40 lg:flex-row flex-col lg:justify-between justify-center items-center z-10">
+        <div className="flex lg:h-full h-fit lg:mt-0 mt-20 lg:flex-row flex-col lg:justify-between justify-center items-center z-10">
           <div className="flex flex-col lg:w-2/4 lg:mr-6 lg:mb-0 mb-16">
             <h1 className="cr-section-title w-full lg:text-left text-center m-0 mb-4">
               <div className="elementor-divider invisible lg:visible">
