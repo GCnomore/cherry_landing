@@ -21,11 +21,13 @@ export const initFirebase = () => {
   }
 };
 
-if (typeof window !== "undefined") {
-  try {
-    const analytics = getAnalytics(initFirebase());
-    console.log("init firebase analytics");
-  } catch (error) {
-    console.log("init analytics", error);
+export const initFbAnalytics = () => {
+  if (typeof window !== "undefined") {
+    try {
+      const analytics = getAnalytics(initFirebase());
+      console.log("init firebase analytics");
+    } catch (error) {
+      console.log("init analytics", error);
+    }
   }
-}
+};
