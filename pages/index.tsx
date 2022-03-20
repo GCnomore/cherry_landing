@@ -8,6 +8,7 @@ import { initFirebase } from "../firebase/clientApp";
 
 const IndexPage = () => {
   useEffect(() => {
+    console.log("mount");
     initFirebase();
   }, []);
   return (
