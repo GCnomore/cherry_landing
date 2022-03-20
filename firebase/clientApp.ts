@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,6 +12,13 @@ const firebaseConfig = {
 };
 
 export const initFirebase = () => {
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  try {
+    const app = initializeApp(firebaseConfig);
+
+    return app;
+  } catch (error) {
+    console.log("initFirebase", error);
+  }
 };
+
+const analytics = getAnalytics(initFirebase());
