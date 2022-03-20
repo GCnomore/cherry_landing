@@ -22,6 +22,10 @@ export const initFirebase = () => {
 };
 
 if (typeof window !== "undefined") {
-  const analytics = getAnalytics(initFirebase());
-  console.log("init firebase analytics");
+  try {
+    const analytics = getAnalytics(initFirebase());
+    console.log("init firebase analytics");
+  } catch (error) {
+    console.log("init analytics", error);
+  }
 }
