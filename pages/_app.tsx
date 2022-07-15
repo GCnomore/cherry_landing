@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       initFbAnalytics();
-      console.log("call init fb analytics");
     }
   }, []);
 
