@@ -14,7 +14,6 @@ const firebaseConfig = {
 export const initFirebase = () => {
   try {
     const app = initializeApp(firebaseConfig);
-    console.log("init firebase");
     return app;
   } catch (error) {
     console.log("initFirebase", error);
@@ -25,7 +24,6 @@ export const initFbAnalytics = () => {
   if (typeof window !== "undefined") {
     try {
       const analytics = getAnalytics(initFirebase());
-      console.log("init firebase analytics");
     } catch (error) {
       console.log("init analytics", error);
     }
