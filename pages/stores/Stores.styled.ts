@@ -10,9 +10,11 @@ export const Title = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 
   > h1 {
     font-size: 1.2rem;
+    font-weight: 600;
   }
 `;
 
