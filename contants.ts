@@ -5,11 +5,11 @@ interface SiteMap {
 }
 
 export const SITE_LIST: { [key: string]: SiteMap } = {
-  ray_ban: {
-    title: "Ray Ban",
-    url: "https://www.ray-ban.com/",
-    logo: "/site_logos/ray_ban_logo.svg",
-  },
+  // ray_ban: {
+  //   title: "Ray Ban",
+  //   url: "https://www.ray-ban.com/",
+  //   logo: "/site_logos/ray_ban_logo.svg",
+  // },
   puma: {
     title: "Puma",
     url: "https://us.puma.com/",

@@ -24,6 +24,9 @@ const Home: React.FC = () => {
 
   return (
     <Styled.Container>
+      <Styled.Title>
+        <h1>Recommended Stores</h1>
+      </Styled.Title>
       <Styled.SiteLogoContainer>{renderSites()}</Styled.SiteLogoContainer>
     </Styled.Container>
   );
