@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SITE_LIST } from "../../contants";
-import * as Styled from "./Stores.styled";
+import * as Styled from "./styled";
 
 const Home: React.FC = () => {
   const renderSites = () => {
