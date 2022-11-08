@@ -1,6 +1,6 @@
 import React from "react";
 
-const AlmostThere = () => {
+const AlmostThere: React.FC = () => {
   return (
     <div className="flex flex-col h-screen w-screen justify-center items-center">
       <h1 className="text-3xl mb-6">Almost there!</h1>
