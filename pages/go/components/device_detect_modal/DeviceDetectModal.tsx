@@ -13,18 +13,32 @@ const DeviceDetectModal: React.FC<IDeviceDetectModal> = ({show}) => {
       <Modal size='lg' show={show} centered contentClassName='device-detect-modal-content'>
          <ModalBody>
             <div className='px-4 py-8'>
-               <div className='mb-4'>
-                  <h2>Please use the Safari browser to access Cherry as it is required for proper functionality.</h2>
-                  <br/>
-                  <h2>Please use Safari browser to access Cherry. The application is not compatible with other browsers.</h2>
+               <div className='mb-16'>
+                  <h3 className='text-[24px] lg:text-[32px]'>
+                     Please use Safari browser to access CHERRY.<br/>
+                     The application is not compatible with other browsers.
+                  </h3>
                </div>
                <div>
-                  <h3>How to change your default web browser</h3>
+                  <h5>How to change your default web browser</h5>
                   <ol className='p-0'>
-                     <li className='mt-2'>1. Go to Settings and scroll down until you find the browser app or the email app.</li>
-                     <li className='mt-2'>2. Tap the app, then tap Default Browser App or Default Mail App.</li>
+                     <li className='mt-2 flex'>
+                        <p className='mr-2'>1.</p>
+                        <p>Go to Settings and scroll down until you find the browser app or the email app.</p>
+                     </li>
+                     <li className='mt-2 flex'>
+                        <p className='mr-2'>2.</p>
+                        <p>Tap the app, then tap Default Browser App or Default Mail App.</p>
+                     </li>
                      <img className='my-4 w-3/4 mx-auto' alt='instruction' src={InstructionImg.src}/>
-                     <li>3. Select <b>Safari</b> to set it as the default. A checkmark appears to confirm it's the default.</li>
+                     <li className='flex'>
+                        <p className='mr-2'>3.</p>
+                        <p>Select <b>Safari</b> to set it as the default. A checkmark appears to confirm it's the default.</p>
+                     </li>
+                     <li className='flex'>
+                        <p className='mr-2'>4.</p>
+                        <p>Return to CHERRY and click the link again.</p>
+                     </li>
                   </ol>
                </div>
             </div>
