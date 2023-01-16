@@ -37,7 +37,7 @@ const DeviceDetectModal: React.FC<IDeviceDetectModal> = ({show}) => {
                      </li>
                      <li className='flex'>
                         <p className='mr-2'>4.</p>
-                        <p>Return to CHERRY and click the link again.</p>
+                        <p>Return to <b>CHERRY</b> and click the link again.</p>
                      </li>
                   </ol>
                </div>
