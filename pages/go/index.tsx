@@ -14,9 +14,9 @@ const AlmostThere: React.FC = () => {
         <h1 className="text-3xl mb-6">Setup Completed!</h1>
         <a
           href="https://api.cherrycart.app/unilink/setup_completed"
-          className="text-[#ffffff] font-bold bg-[#da2e5e] rounded py-2 w-5/6 text-center no-underline"
+          className="hover:text-[#fff] visited:text-[#fff] text-[#fff] font-bold bg-[#da2e5e] rounded py-2 w-5/6 text-center no-underline"
         >
-          Click to Start CHERRY
+          Click to start CHERRY
         </a>
       </div>
       <DeviceDetectModal show={!isSafari} />

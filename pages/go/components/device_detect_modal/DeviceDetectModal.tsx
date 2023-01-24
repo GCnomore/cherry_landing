@@ -24,7 +24,7 @@ const DeviceDetectModal: React.FC<IDeviceDetectModal> = ({show}) => {
                   <ol className='p-0'>
                      <li className='mt-2 flex text-[1rem]'>
                         <p className='mr-2'>1.</p>
-                        <p>Go to Settings and scroll down until you find the browser app or the email app.</p>
+                        <p>Go to Settings and scroll down until you find the browser app.</p>
                      </li>
                      <li className='mt-2 flex text-[1rem]'>
                         <p className='mr-2'>2.</p>
