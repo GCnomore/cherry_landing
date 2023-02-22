@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 
 import styled from "styled-components";
+import Link from "next/link";
 
 type Props = {
   children?: ReactNode;
@@ -61,9 +62,12 @@ const Layout = ({ children, title }: Props) => (
       />
     </Head>
     {children}
-    <footer className="w-full flex bg-[#e4e4e4]">
+    <footer className="w-full flex bg-[#e4e4e4] flex-col">
       <span className="w-full md:py-14 py-8 text-center font-[300] xl:text-lg md:text-base text-sm">
-        &copy; 2022 <strong>Cherry, Inc.</strong> All rights reserved.
+        <p className="mb-2">&copy; 2022 <strong>Cherry, Inc.</strong> All rights reserved.</p>
+        <Link className="underline" href={'/privacy-policy'}>
+          <p>Privacy Policy</p>
+        </Link>
       </span>
     </footer>
   </div>

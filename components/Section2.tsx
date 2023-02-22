@@ -1,9 +1,5 @@
 import React from "react";
 
-import OneClick from "./images/one_click.svg";
-import NoForms from "./images/no_forms.svg";
-import AllInOne from "./images/all_in_one.svg";
-
 export default function Section2() {
   return (
     <section id="features" className="section2">

@@ -63,6 +63,10 @@ body {
     color: var(--main-color);
   }
 
+  .cr-bg-primary {
+    background-color: var(--main-color);
+  }
+
   .cr-content-mt {
     @apply md:mt-28 mt-16;
   }
